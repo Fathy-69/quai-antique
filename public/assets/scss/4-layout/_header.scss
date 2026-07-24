@@ -1,0 +1,59 @@
+// =========================================================
+// 🏔️ LAYOUT HEADER & NAVBAR STICKY
+// =========================================================
+
+header {
+    background-color: $dark-savoy;
+    border-bottom: 2px solid $gold-accent;
+
+    .navbar {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    // Logo & Marque du Restaurant
+    .navbar-brand {
+        font-family: $font-headings;
+        letter-spacing: 1px;
+        transition: opacity 0.3s ease;
+
+        i {
+            color: $gold-accent;
+        }
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    // Liens de Navigation
+    .navbar-nav {
+        .nav-link {
+            color: rgba(#ffffff, 0.85);
+            font-size: 0.95rem;
+            position: relative;
+            @include transition-smooth(color);
+
+            &:hover, &.active {
+                color: $gold-accent;
+            }
+
+            // Soulignement animé au survol
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background-color: $gold-accent;
+                @include transition-smooth(all);
+                transform: translateX(-50%);
+            }
+
+            &:hover::after, &.active::after {
+                width: 70%;
+            }
+        }
+    }
+}
