@@ -1,0 +1,62 @@
+// =========================================================
+// 🦶 LAYOUT FOOTER (Affichage des Horaires US5)
+// =========================================================
+
+footer {
+    background-color: $dark-savoy;
+    color: lighten($beige-border, 15%);
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    border-top: 3px solid $gold-accent;
+
+    h5 {
+        color: #ffffff;
+        font-family: $font-headings;
+        margin-bottom: 1.5rem;
+        position: relative;
+        padding-bottom: 0.5rem;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: $gold-accent;
+        }
+    }
+
+    // Tableau des Horaires d'Ouverture Dynamiques (US5)
+    .schedule-table {
+        width: 100%;
+        font-size: 0.9rem;
+
+        td {
+            padding: 0.35rem 0;
+            border-bottom: 1px dashed rgba($beige-border, 0.2);
+        }
+
+        .day-name {
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .hours-time {
+            text-align: right;
+            color: $gold-accent;
+        }
+
+        .closed-day {
+            color: #e63946;
+            font-style: italic;
+        }
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba($beige-border, 0.2);
+        padding-top: 1.5rem;
+        margin-top: 3rem;
+        font-size: 0.85rem;
+    }
+}
