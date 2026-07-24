@@ -1,0 +1,28 @@
+// =========================================================
+// 🎨 DESIGN TOKENS & SURCHARGES BOOTSTRAP 5
+// =========================================================
+
+// 🏔️ Palette de Couleurs Officielle Quai Antique (Savoie)
+$dark-savoy   : #392C1E !default; // Café Sombre (Navbar, Footer, Titres)
+$gold-accent  : #906427 !default; // Ocre Doré (Boutons CTA, Accents, Prix)
+$gold-hover   : #734E1D !default; // Ocre au survol
+$beige-light  : #F8F6F0 !default; // Fond de page principal (Alpine Light)
+$beige-border : #B6AC97 !default; // Bordures & séparateurs (Beige Sage)
+$white        : #FFFFFF !default; // Blanc pur
+
+// 🔤 Polices d'Écriture Google Fonts
+$font-headings : 'Outfit', sans-serif !default;
+$font-body     : 'Roboto', sans-serif !default;
+
+// 🛠️ Surcharges des Variables Natives Bootstrap 5
+$primary       : $gold-accent !default;
+$dark          : $dark-savoy !default;
+$body-bg       : $beige-light !default;
+$body-color    : $dark-savoy !default;
+$border-color  : $beige-border !default;
+
+// 📐 Rayons de Bordures (Border Radius)
+$border-radius-sm   : 6px !default;
+$border-radius      : 12px !default;
+$border-radius-lg   : 20px !default;
+$border-radius-pill : 50rem !default;
