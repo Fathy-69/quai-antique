@@ -1,0 +1,18 @@
+# Variables d'environnement & identifiants secrets
+.env
+
+# Dépendances Composer (générées automatiquement)
+/vendor/
+
+# Fichiers dynamiques et logs
+/storage/logs/*.log
+/storage/cache/*
+!/storage/cache/.gitkeep
+!/storage/logs/.gitkeep
+!/storage/uploads/.gitkeep
+
+# Fichiers système & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
