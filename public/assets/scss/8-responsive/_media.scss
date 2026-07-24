@@ -1,0 +1,4 @@
+@include respond-to('mobile') {
+    .hero-title { font-size: 2.2rem !important; }
+    .booking-card { padding: 1.5rem !important; }
+}
