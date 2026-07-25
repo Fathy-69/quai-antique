@@ -1,20 +1,8 @@
-// =========================================================
-// ⚙️ FONCTIONS SCSS RÉUTILISABLES
-// =========================================================
-
-// Convertit une valeur en pixels vers rem (ex: rem(16px) => 1rem)
 @function rem($pixels, $context: 16px) {
-    @if (unitless($pixels)) {
-        $pixels: $pixels * 1px;
-    }
+    @if (unitless($pixels)) { $pixels: $pixels * 1px; }
     @return ($pixels / $context) * 1rem;
 }
-
-// Calcule la couleur de texte idéale (Noir ou Blanc) selon la couleur de fond
 @function text-contrast($bg-color) {
-    @if (lightness($bg-color) > 60%) {
-        return #392C1E;
-    } @else {
-        return #ffffff;
-    }
+    @if (lightness($bg-color) > 60%) { @return #392C1E; }
+    @else { @return #ffffff; }
 }
