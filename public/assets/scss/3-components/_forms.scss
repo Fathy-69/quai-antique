@@ -1,21 +1,5 @@
-// =========================================================
-// 📝 COMPONENT FORMS (Réservation US6 & Auth US1/US7)
-// =========================================================
-
 .form-control, .form-select {
-    border: 1.5px solid $beige-border;
-    border-radius: $border-radius-sm;
-    padding: 0.75rem 1rem;
-    @include transition-smooth(border-color);
-
-    &:focus {
-        border-color: $gold-accent;
-        box-shadow: 0 0 0 0.25rem rgba($gold-accent, 0.2);
-    }
+    border: 1.5px solid $beige-border; border-radius: $border-radius-sm; padding: 0.75rem 1rem; @include transition-smooth(border-color);
+    &:focus { border-color: $gold-accent; box-shadow: 0 0 0 0.25rem rgba($gold-accent, 0.2); }
 }
-
-.form-label {
-    font-weight: 600;
-    color: $dark-savoy;
-    margin-bottom: 0.5rem;
-}
+.form-label { font-weight: 600; color: $dark-savoy; margin-bottom: 0.5rem; }

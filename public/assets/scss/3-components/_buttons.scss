@@ -1,35 +1,9 @@
-// =========================================================
-//  COMPONENT BUTTONS (Boutons Ocre Doré & CTA)
-// =========================================================
-
 .btn-gold {
-    background-color: $gold-accent;
-    color: #ffffff;
-    border: 2px solid $gold-accent;
-    font-weight: 600;
-    @include transition-smooth(all);
-
-    &:hover, &:focus {
-        background-color: $gold-hover;
-        border-color: $gold-hover;
-        color: #ffffff;
-        box-shadow: 0 4px 12px rgba($gold-accent, 0.35);
-    }
+    background-color: $gold-accent; color: #ffffff; border: 2px solid $gold-accent; font-weight: 600; @include transition-smooth(all);
+    &:hover, &:focus { background-color: $gold-hover; border-color: $gold-hover; color: #ffffff; box-shadow: 0 4px 12px rgba($gold-accent, 0.35); }
 }
-
 .btn-outline-gold {
-    background-color: transparent;
-    color: $gold-accent;
-    border: 2px solid $gold-accent;
-    font-weight: 600;
-    @include transition-smooth(all);
-
-    &:hover {
-        background-color: $gold-accent;
-        color: #ffffff;
-    }
+    background-color: transparent; color: $gold-accent; border: 2px solid $gold-accent; font-weight: 600; @include transition-smooth(all);
+    &:hover { background-color: $gold-accent; color: #ffffff; }
 }
-
-.hover-scale {
-    @include hover-lift(-3px);
-}
+.hover-scale { @include hover-lift(-3px); }

@@ -1,47 +1,10 @@
-// =========================================================
-// COMPONENT CARDS (Plats US3 & Menus US4)
-// =========================================================
-
-// Carte Plat (US3)
 .card-dish {
-    background-color: #ffffff;
-    border: 1px solid $beige-border;
-    border-radius: $border-radius;
-    overflow: hidden;
-    @include hover-lift(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-
-    .dish-img {
-        height: 200px;
-        object-fit: cover;
-        width: 100%;
-    }
-
-    .dish-title {
-        font-family: $font-headings;
-        font-weight: 700;
-        color: $dark-savoy;
-    }
-
-    .dish-price {
-        font-family: $font-headings;
-        font-weight: 700;
-        color: $gold-accent;
-        font-size: 1.25rem;
-    }
+    background-color: #ffffff; border: 1px solid $beige-border; border-radius: $border-radius; overflow: hidden; @include hover-lift(-5px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    .dish-img { height: 200px; object-fit: cover; width: 100%; }
+    .dish-title { font-family: $font-headings; font-weight: 700; color: $dark-savoy; }
+    .dish-price { font-family: $font-headings; font-weight: 700; color: $gold-accent; font-size: 1.25rem; }
 }
-
-// Carte Formule / Menu (US4)
 .formula-card {
-    background: linear-gradient(135deg, #ffffff 0%, $beige-light 100%);
-    border: 2px solid $gold-accent;
-    border-radius: $border-radius-lg;
-    padding: 2rem;
-
-    .formula-title {
-        font-family: $font-headings;
-        color: $dark-savoy;
-        border-bottom: 2px solid $gold-accent;
-        padding-bottom: 0.5rem;
-    }
+    background: linear-gradient(135deg, #ffffff 0%, $beige-light 100%); border: 2px solid $gold-accent; border-radius: $border-radius-lg; padding: 2rem;
+    .formula-title { font-family: $font-headings; color: $dark-savoy; border-bottom: 2px solid $gold-accent; padding-bottom: 0.5rem; }
 }

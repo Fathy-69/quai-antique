@@ -1,3 +1,41 @@
-h1, h2, h3, h4, h5, h6 { font-family: $font-headings; font-weight: 700; color: $dark-savoy; margin-bottom: 1rem; }
-.text-gold { color: $gold-accent; }
-.font-heading { font-family: $font-headings; }
+// =========================================================
+// 🔤 TYPOGRAPHIES OFFICIELLES (Montserrat + Lora + Hind Madurai)
+// =========================================================
+
+h1, h2 {
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $cafe-sombre;
+    margin-bottom: 1rem;
+}
+
+h3, h4 {
+    font-family: $font-subheading;
+    font-weight: 600;
+    color: $cafe-sombre;
+    margin-bottom: 0.75rem;
+}
+
+h5, h6 {
+    font-family: $font-subheading;
+    font-weight: 600;
+    color: $cafe-sombre;
+    margin-bottom: 0.5rem;
+}
+
+body, p, li, span {
+    font-family: $font-body;
+    color: $cafe-sombre;
+}
+
+.text-gold {
+    color: $ocre-dore !important;
+}
+
+.font-heading {
+    font-family: $font-heading;
+}
+
+.font-subheading {
+    font-family: $font-subheading;
+}

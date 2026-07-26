@@ -1,0 +1,419 @@
+/* ==========================================================================
+   QUAI ANTIQUE - Charte Graphique & Styles Officiels (Sprint 2)
+   Couleurs :
+   - Café Sombre : #392C1E (Titres & Éléments sombres)
+   - Ocre Doré   : #906427 (Boutons CTA & Accents)
+   - Beige Sage  : #B6AC97 (Bordures & Séparateurs)
+   - Fond Clairs : #F8F6F0 / #FFFFFF
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@500;600;700;800&display=swap');
+
+:root {
+  --color-cafe-sombre: #392C1E;
+  --color-cafe-darker: #261D13;
+  --color-ocre-dore: #906427;
+  --color-ocre-hover: #734E1D;
+  --color-beige-sage: #B6AC97;
+  --color-beige-light: #F8F6F0;
+  --color-blanc: #FFFFFF;
+  --color-text-muted: #6C757D;
+  
+  --font-heading: 'Montserrat', sans-serif;
+  --font-subheading: 'Lora', serif;
+  --font-body: 'Hind Madurai', sans-serif;
+
+  --shadow-sm: 0 4px 12px rgba(57, 44, 30, 0.08);
+  --shadow-md: 0 8px 24px rgba(57, 44, 30, 0.12);
+  --shadow-lg: 0 16px 40px rgba(57, 44, 30, 0.18);
+  --transition-fast: all 0.3s ease;
+}
+
+/* --- Base & Reset --- */
+body {
+  font-family: var(--font-body);
+  color: var(--color-cafe-sombre);
+  background-color: var(--color-beige-light);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-cafe-sombre);
+  font-weight: 700;
+}
+
+.font-serif {
+  font-family: var(--font-subheading) !important;
+}
+
+.font-sans {
+  font-family: var(--font-heading) !important;
+}
+
+/* --- Typographie Spécifique --- */
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-blanc);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  letter-spacing: -0.5px;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
+.section-title {
+  font-size: 2.25rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-ocre-dore);
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+}
+
+/* --- Navigation Navbar --- */
+header, nav, .navbar, .bg-dark-savoy {
+  background-color: var(--color-cafe-sombre) !important;
+  border-bottom: 2px solid var(--color-ocre-dore);
+}
+
+.navbar .navbar-brand, header .navbar-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-blanc) !important;
+}
+
+.navbar .nav-link, header .nav-link {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin: 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition-fast);
+}
+
+.navbar .nav-link:hover, .navbar .nav-link.active,
+header .nav-link:hover, header .nav-link.active {
+  color: var(--color-ocre-dore) !important;
+}
+
+/* --- Hero Banner --- */
+.hero-banner {
+  position: relative;
+  background: linear-gradient(rgba(57, 44, 30, 0.70), rgba(57, 44, 30, 0.80)), url('/assets/images/hero-bg.jpg') center/cover no-repeat;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-blanc);
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+/* --- Buttons & CTA Accessibilité (WCAG AAA Contrast > 7:1) --- */
+.btn-gold, .btn-ocre {
+  background-color: var(--color-ocre-dore) !important;
+  color: #ffffff !important;
+  font-family: var(--font-heading);
+  font-weight: 700 !important;
+  border: 2px solid var(--color-ocre-dore) !important;
+  transition: var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.btn-gold:hover, .btn-gold:focus,
+.btn-ocre:hover, .btn-ocre:focus {
+  background-color: var(--color-ocre-hover) !important;
+  border-color: var(--color-ocre-hover) !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-outline-gold, .btn-outline-ocre {
+  border: 2px solid var(--color-ocre-dore) !important;
+  color: #ffffff !important;
+  background-color: rgba(57, 44, 30, 0.6) !important;
+  font-family: var(--font-heading);
+  font-weight: 700 !important;
+  transition: var(--transition-fast);
+}
+
+.btn-outline-gold:hover, .btn-outline-gold:focus,
+.btn-outline-ocre:hover, .btn-outline-ocre:focus {
+  background-color: var(--color-ocre-dore) !important;
+  color: #ffffff !important;
+}
+
+/* --- Galerie d'Images Interactive & Accessibilité (US2) --- */
+.gallery-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  aspect-ratio: 4/3;
+  border: 2px solid var(--color-beige-sage);
+  background-color: #1e140a;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 20, 10, 0.90) !important; /* Sombre Haute Lisibilité */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.gallery-overlay-title, .gallery-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800 !important;
+  color: #ffffff !important; /* Blanc Pur Ultra Lisible */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+  margin: 0 0 0.5rem 0;
+  transform: translateY(15px);
+  transition: transform 0.35s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-card:hover .gallery-overlay-title,
+.gallery-card:hover .gallery-title {
+  transform: translateY(0);
+}
+
+/* Placement spécifique du CTA juste sous la galerie (US2) */
+.gallery-cta-wrapper {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+/* --- Cards Menu / Plats --- */
+.card-dish {
+  background: var(--color-blanc);
+  border: 1px solid var(--color-beige-sage);
+  border-radius: 8px;
+  padding: 1.5rem;
+  height: 100%;
+  transition: var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-dish:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-ocre-dore);
+}
+
+.dish-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px dashed var(--color-beige-sage);
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.dish-title {
+  font-family: var(--font-subheading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-cafe-sombre);
+  margin: 0;
+}
+
+.dish-price {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-ocre-dore);
+}
+
+.dish-description {
+  font-size: 0.95rem;
+  color: var(--color-cafe-sombre);
+  margin-bottom: 1rem;
+}
+
+.badge-category {
+  background-color: var(--color-beige-light);
+  color: var(--color-cafe-sombre);
+  border: 1px solid var(--color-beige-sage);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+/* --- Formula Box --- */
+.formula-card {
+  background-color: var(--color-blanc);
+  border-top: 4px solid var(--color-ocre-dore);
+  border-left: 1px solid var(--color-beige-sage);
+  border-right: 1px solid var(--color-beige-sage);
+  border-bottom: 1px solid var(--color-beige-sage);
+  border-radius: 6px;
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.formula-price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-ocre-dore);
+}
+
+/* --- Formulaire de Réservation (US6) --- */
+.booking-box {
+  background-color: var(--color-blanc);
+  border: 1px solid var(--color-beige-sage);
+  border-radius: 8px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.form-label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-cafe-sombre);
+  margin-bottom: 0.4rem;
+}
+
+.form-control, .form-select {
+  border: 1px solid var(--color-beige-sage);
+  border-radius: 4px;
+  padding: 0.65rem 0.9rem;
+  font-family: var(--font-body);
+  transition: var(--transition-fast);
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--color-ocre-dore);
+  box-shadow: 0 0 0 0.25rem rgba(144, 100, 39, 0.2);
+}
+
+.time-slot-badge {
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--color-beige-sage);
+  border-radius: 4px;
+  background-color: var(--color-blanc);
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: var(--transition-fast);
+}
+
+.time-slot-badge:hover, .time-slot-badge.selected {
+  background-color: var(--color-ocre-dore);
+  color: var(--color-blanc);
+  border-color: var(--color-ocre-dore);
+}
+
+.time-slot-badge.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background-color: #e9ecef;
+  text-decoration: line-through;
+}
+
+/* --- Footer Dynamique (US5) --- */
+.footer-quai {
+  background-color: var(--color-cafe-sombre);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 3.5rem 0 1.5rem 0;
+  border-top: 3px solid var(--color-ocre-dore);
+}
+
+.footer-title {
+  color: var(--color-blanc);
+  font-family: var(--font-subheading);
+  font-size: 1.3rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 35px;
+  height: 2px;
+  background-color: var(--color-ocre-dore);
+}
+
+.footer-hours-table {
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.footer-hours-table td {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(182, 172, 151, 0.15);
+}
+
+.footer-hours-table tr:last-child td {
+  border-bottom: none;
+}
+
+.day-name {
+  font-weight: 600;
+  color: var(--color-beige-sage);
+}
+
+.hours-val {
+  text-align: right;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(182, 172, 151, 0.2);
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}

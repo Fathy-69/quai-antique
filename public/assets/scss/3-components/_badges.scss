@@ -1,27 +1,5 @@
-// =========================================================
-// 🏷️ COMPONENT BADGES (Créneaux 15 min US6)
-// =========================================================
-
 .time-slot-badge {
-    padding: 0.6rem 1rem;
-    border: 1.5px solid $gold-accent;
-    border-radius: $border-radius-sm;
-    background-color: #ffffff;
-    color: $dark-savoy;
-    font-weight: 600;
-    cursor: pointer;
-    @include transition-smooth(all);
-
-    &:hover, &.selected {
-        background-color: $gold-accent;
-        color: #ffffff;
-    }
-
-    &.disabled {
-        background-color: #e9ecef;
-        border-color: #dee2e6;
-        color: #6c757d;
-        cursor: not-allowed;
-        opacity: 0.6;
-    }
+    padding: 0.6rem 1rem; border: 1.5px solid $gold-accent; border-radius: $border-radius-sm; background-color: #ffffff; color: $dark-savoy; font-weight: 600; cursor: pointer; @include transition-smooth(all);
+    &:hover, &.selected { background-color: $gold-accent; color: #ffffff; }
+    &.disabled { background-color: #e9ecef; border-color: #dee2e6; color: #6c757d; cursor: not-allowed; opacity: 0.6; }
 }

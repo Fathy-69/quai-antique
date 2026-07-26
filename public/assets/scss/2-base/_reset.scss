@@ -1,25 +1,4 @@
-// =========================================================
-// 🔄 BASE RESET & RÉINITIALISATIONS
-// =========================================================
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-body {
-    background-color: $beige-light;
-    color: $dark-savoy;
-    font-family: $font-body;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
+*, *::before, *::after { box-sizing: border-box; }
+body { background-color: $beige-light; color: $dark-savoy; font-family: $font-body; line-height: 1.6; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; }

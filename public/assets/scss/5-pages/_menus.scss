@@ -1,15 +1,1 @@
-.category-filter-btn {
-    border: 2px solid $gold-accent;
-    color: $dark-savoy;
-    background-color: transparent;
-    border-radius: $border-radius-pill;
-    padding: 0.5rem 1.5rem;
-    font-weight: 600;
-    margin: 0.25rem;
-    @include transition-smooth(all);
-
-    &:hover, &.active {
-        background-color: $gold-accent;
-        color: #ffffff;
-    }
-}
+.category-filter-btn { border: 2px solid $gold-accent; color: $dark-savoy; background-color: transparent; border-radius: $border-radius-pill; padding: 0.5rem 1.5rem; font-weight: 600; margin: 0.25rem; @include transition-smooth(all); &:hover, &.active { background-color: $gold-accent; color: #ffffff; } }
