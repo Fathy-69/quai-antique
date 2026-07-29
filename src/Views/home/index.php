@@ -51,46 +51,133 @@
     </div>
 </section>
 
-<!-- 3. GALERIE GASTRONOMIQUE (US2) -->
+<!-- 3. GALERIE GASTRONOMIQUE (US2 - CARROUSEL INTERACTIF DE 9 PLATS) -->
 <section class="section-padding bg-cream py-5" id="galerie">
-    <div class="container text-center">
+    <div class="container text-center position-relative px-4 px-md-5">
         <h2 class="font-serif display-5 fw-bold text-dark-savoy mb-2">Galerie Gastronomique</h2>
-        <div class="gold-ornament mb-5">❊</div>
+        <p class="font-serif fst-italic text-muted mb-1">Découvrez la richesse culinaire savoyarde du Chef Arnaud Michant</p>
+        <div class="gold-ornament mb-4">❊</div>
 
-        <!-- Carousel / 3 Cards Grid -->
-        <div class="row g-4 justify-content-center">
+        <!-- Système de défilement (Bootstrap 5 Carousel) avec 9 photos de plats en 3 diapos -->
+        <div id="gastronomicGalleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
             
-            <!-- Card 1 : Omble Chevalier -->
-            <div class="col-lg-4 col-md-6">
-                <div class="gallery-card-container shadow-sm">
-                    <img src="/assets/images/dishes/omble.jpg" alt="Omble Chevalier" class="gallery-card-img">
-                    <div class="gallery-card-caption">
-                        <h3 class="font-serif text-white h4 mb-1">Omble Chevalier</h3>
-                        <p class="font-serif fst-italic text-gold mb-0 small">au beurre blanc de Savoie</p>
+            <!-- Diapositives du carrousel -->
+            <div class="carousel-inner">
+                
+                <!-- SLIDE 1 : Plats d'Exception 1, 2, 3 -->
+                <div class="carousel-item active">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-card-container shadow-sm">
+                                <img src="/assets/images/dishes/omble.jpg" alt="Omble Chevalier" class="gallery-card-img">
+                                <div class="gallery-card-caption">
+                                    <h3 class="font-serif text-white h4 mb-1">Omble Chevalier</h3>
+                                    <p class="font-serif fst-italic text-gold mb-0 small">au beurre blanc de Savoie</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-card-container shadow-sm">
+                                <img src="/assets/images/dishes/raviole.jpg" alt="Raviole de Royans" class="gallery-card-img">
+                                <div class="gallery-card-caption">
+                                    <h3 class="font-serif text-white h4 mb-1">Raviole de Royans</h3>
+                                    <p class="font-serif fst-italic text-gold mb-0 small">crème de morilles</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-card-container shadow-sm">
+                                <img src="/assets/images/dishes/tonka.jpg" alt="Délice chocolat tonka" class="gallery-card-img">
+                                <div class="gallery-card-caption">
+                                    <h3 class="font-serif text-white h4 mb-1">Délice chocolat tonka</h3>
+                                    <p class="font-serif fst-italic text-gold mb-0 small">noisette du Piémont</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- SLIDE 2 : Plats d'Exception 4, 5, 6 -->
+                <div class="carousel-item">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-card-container shadow-sm">
+                                <img src="/assets/images/dishes/tartiflette-tradition.jpg" alt="Tartiflette au Reblochon AOP" class="gallery-card-img">
+                                <div class="gallery-card-caption">
+                                    <h3 class="font-serif text-white h4 mb-1">Tartiflette Reblochon AOP</h3>
+                                    <p class="font-serif fst-italic text-gold mb-0 small">gratin traditionnel croustillant</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-card-container shadow-sm">
+                                <img src="/assets/images/dishes/filet-perche.jpg" alt="Filets de Perche du Lac" class="gallery-card-img">
+                                <div class="gallery-card-caption">
+                                    <h3 class="font-serif text-white h4 mb-1">Filets de Perche du Lac</h3>
+                                    <p class="font-serif fst-italic text-gold mb-0 small">beurre citronné et persil frais</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-card-container shadow-sm">
+                                <img src="/assets/images/dishes/diots-au-vin.jpg" alt="Diots de Savoie" class="gallery-card-img">
+                                <div class="gallery-card-caption">
+                                    <h3 class="font-serif text-white h4 mb-1">Diots de Savoie</h3>
+                                    <p class="font-serif fst-italic text-gold mb-0 small">au vin blanc Mondeuse & polenta</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SLIDE 3 : Plats d'Exception 7, 8, 9 -->
+                <div class="carousel-item">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-card-container shadow-sm">
+                                <img src="/assets/images/dishes/gaufre-savoyarde.jpg" alt="Gaufre aux Myrtilles Sauvages" class="gallery-card-img">
+                                <div class="gallery-card-caption">
+                                    <h3 class="font-serif text-white h4 mb-1">Gaufre aux Myrtilles</h3>
+                                    <p class="font-serif fst-italic text-gold mb-0 small">coulis maison et chantilly</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-card-container shadow-sm">
+                                <img src="/assets/images/dishes/potimarron.jpg" alt="Velouté de Potimarron" class="gallery-card-img">
+                                <div class="gallery-card-caption">
+                                    <h3 class="font-serif text-white h4 mb-1">Velouté de Potimarron</h3>
+                                    <p class="font-serif fst-italic text-gold mb-0 small">crème de reblochon & graines</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-card-container shadow-sm">
+                                <img src="/assets/images/dishes/fondue.jpg" alt="Fondue Savoyarde AOP" class="gallery-card-img">
+                                <div class="gallery-card-caption">
+                                    <h3 class="font-serif text-white h4 mb-1">Fondue Savoyarde AOP</h3>
+                                    <p class="font-serif fst-italic text-gold mb-0 small">fromages affinés & charcuterie</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <!-- Card 2 : Raviole de Royans -->
-            <div class="col-lg-4 col-md-6">
-                <div class="gallery-card-container shadow-sm">
-                    <img src="/assets/images/dishes/raviole.jpg" alt="Raviole de Royans" class="gallery-card-img">
-                    <div class="gallery-card-caption">
-                        <h3 class="font-serif text-white h4 mb-1">Raviole de Royans</h3>
-                        <p class="font-serif fst-italic text-gold mb-0 small">crème de morilles</p>
-                    </div>
-                </div>
-            </div>
+            <!-- Boutons de contrôle (Précédent / Suivant) -->
+            <button class="carousel-gallery-control prev" type="button" data-bs-target="#gastronomicGalleryCarousel" data-bs-slide="prev" aria-label="Précédent">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="carousel-gallery-control next" type="button" data-bs-target="#gastronomicGalleryCarousel" data-bs-slide="next" aria-label="Suivant">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
 
-            <!-- Card 3 : Délice chocolat tonka -->
-            <div class="col-lg-4 col-md-6">
-                <div class="gallery-card-container shadow-sm">
-                    <img src="/assets/images/dishes/tonka.jpg" alt="Délice chocolat tonka" class="gallery-card-img">
-                    <div class="gallery-card-caption">
-                        <h3 class="font-serif text-white h4 mb-1">Délice chocolat tonka</h3>
-                        <p class="font-serif fst-italic text-gold mb-0 small">noisette du Piémont</p>
-                    </div>
-                </div>
+            <!-- Indicateurs de carrousel -->
+            <div class="carousel-indicators carousel-indicators-gold">
+                <button type="button" data-bs-target="#gastronomicGalleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#gastronomicGalleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#gastronomicGalleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
 
         </div>
