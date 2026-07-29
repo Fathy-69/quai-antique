@@ -128,6 +128,54 @@
                     </div>
                 </div>
 
+                <!-- Plat 6 : Tartiflette Traditionnelle au Reblochon AOP -->
+                <div class="col-lg-4 col-md-6 dish-card-wrapper" data-category="plats">
+                    <div class="dish-card-exact">
+                        <img src="/assets/images/dishes/tartiflette-tradition.jpg" alt="Tartiflette Traditionnelle">
+                        <h3 class="dish-title text-uppercase">Tartiflette au Reblochon AOP</h3>
+                        <div class="dish-price">22.50 €</div>
+                        <p class="dish-desc">
+                            Gratin traditionnel de pommes de terre, lardons croustillants, oignons et Reblochon AOP fondu.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Plat 7 : Filets de Perche du Lac -->
+                <div class="col-lg-4 col-md-6 dish-card-wrapper" data-category="plats">
+                    <div class="dish-card-exact">
+                        <img src="/assets/images/dishes/filet-perche.jpg" alt="Filets de Perche du Lac">
+                        <h3 class="dish-title text-uppercase">Filets de Perche du Lac</h3>
+                        <div class="dish-price">28.00 €</div>
+                        <p class="dish-desc">
+                            Filets de perche poêlés au beurre citronné, persil frais et pommes de terre grenailles.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Plat 8 : Diots de Savoie au Vin Blanc -->
+                <div class="col-lg-4 col-md-6 dish-card-wrapper" data-category="plats">
+                    <div class="dish-card-exact">
+                        <img src="/assets/images/dishes/diots-au-vin.jpg" alt="Diots de Savoie au Vin Blanc">
+                        <h3 class="dish-title text-uppercase">Diots de Savoie au Vin Blanc</h3>
+                        <div class="dish-price">21.00 €</div>
+                        <p class="dish-desc">
+                            Saucisses artisanales savoyardes mijotées au vin blanc Mondeuse et compotée d'oignons, servies sur polenta.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Plat 9 : Gaufre Artisanale aux Myrtilles -->
+                <div class="col-lg-4 col-md-6 dish-card-wrapper" data-category="desserts">
+                    <div class="dish-card-exact">
+                        <img src="/assets/images/dishes/gaufre-savoyarde.jpg" alt="Gaufre Artisanale aux Myrtilles">
+                        <h3 class="dish-title text-uppercase">Gaufre aux Myrtilles Sauvages</h3>
+                        <div class="dish-price">11.00 €</div>
+                        <p class="dish-desc">
+                            Gaufre croustillante topping myrtilles sauvages, coulis maison, sucre glace et chantilly fouettée.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
