@@ -1,5 +1,5 @@
 /**
- * RESTAURANT QUAI ANTIQUE - MAIN JAVASCRIPT UNIFIÉ (VERSION PRODUCTION 10/10)
+ * RESTAURANT QUAI ANTIQUE - MAIN JAVASCRIPT UNIFIÉ 
  * Architecture modulaire, propre et maintenable pour le dossier professionnel.
  * 
  * Inclus :
