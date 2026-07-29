@@ -1,113 +1,105 @@
 <!-- ========================================================= -->
-<!-- PAGE D'ACCUEIL - RESTAURANT QUAI ANTIQUE -->
+<!-- PAGE D'ACCUEIL - CONFORME À LA MAQUETTE EXACTE DU SUJET -->
 <!-- ========================================================= -->
 
 <!-- 1. HERO BANNER -->
 <section class="hero-banner d-flex align-items-center justify-content-center text-center">
-    <div class="container">
-        <h1 class="hero-title text-uppercase font-heading fw-bold mb-3">
+    <div class="container py-5">
+        <span class="hero-tagline text-uppercase text-gold font-serif letter-spacing-2 mb-2 d-block">Restaurant</span>
+        <h1 class="hero-main-title text-uppercase font-serif text-white display-2 fw-bold mb-3">
             Quai Antique
         </h1>
-        <p class="hero-subtitle lead mb-4">
-            Cuisine gastronomique savoyarde orchestrée par le Chef Arnaud Michant au cœur de Chambéry.
+        <p class="hero-subtext font-serif fst-italic text-white-50 fs-4 mb-5">
+            La promesse d'un voyage culinaire savoyard
         </p>
-        <div class="d-flex justify-content-center gap-3">
-            <a href="/reservation" class="btn btn-gold btn-lg px-4 py-3 rounded-pill shadow-lg hover-scale">
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="/reservation" class="btn btn-gold btn-lg px-4 py-3 rounded-1 text-uppercase fw-bold font-serif">
                 <i class="fa-regular fa-calendar-check me-2"></i>Réserver une table
             </a>
-            <a href="/menus" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill hover-scale">
-                <i class="fa-solid fa-utensils me-2"></i>Découvrir la Carte
+            <a href="/menus" class="btn btn-glass btn-lg px-4 py-3 rounded-1 text-uppercase fw-bold font-serif">
+                <i class="fa-solid fa-book-open me-2"></i>Découvrir la carte
             </a>
         </div>
     </div>
 </section>
 
-<!-- 2. SECTION HISTOIRE DU CHEF -->
-<section class="section-padding bg-white">
-    <div class="container">
+<!-- 2. SECTION LE CHEF & LA VISION -->
+<section class="section-padding bg-cream py-5">
+    <div class="container py-4">
         <div class="row align-items-center g-5">
-            <div class="col-lg-6">
-                <img src="/assets/images/chef-arnaud.jpg" alt="Chef Arnaud Michant au Quai Antique" class="img-fluid rounded-4 shadow-sm">
+            <div class="col-lg-5">
+                <div class="chef-image-wrapper">
+                    <img src="/assets/images/chef-arnaud.jpg" alt="Chef Arnaud Michant" class="img-fluid rounded-4 shadow-lg w-100">
+                </div>
             </div>
-            <div class="col-lg-6">
-                <span class="text-gold text-uppercase fw-bold tracking-wide">Une Passion Savoyarde</span>
-                <h2 class="font-heading fs-1 my-2">Le Mot du Chef Arnaud Michant</h2>
-                <p class="text-muted">
-                    Inspiré par les montagnes de Savoie et la richesse des produits locaux, le Chef Arnaud Michant sélectionne chaque jour des ingrédients d'exception issus des producteurs de la région de Chambéry.
+            <div class="col-lg-7">
+                <span class="text-uppercase text-dark-gold font-serif letter-spacing-2 fw-semibold d-block mb-1">Le Chef & La Vision</span>
+                <h2 class="font-serif display-4 text-gold mb-3">Arnaud Michant</h2>
+                <div class="gold-ornament mb-4">❊</div>
+                
+                <p class="lead text-dark-savoy mb-3">
+                    Au Quai Antique, le Chef Arnaud Michant sublime les trésors de la Savoie à travers une cuisine gastronomique et authentique.
                 </p>
-                <p class="text-muted">
-                    Du traditionnel Tartiflette au Reblochon AOP revisité jusqu'au filet de omble chevalier du Lac du Bourget, découvrez une expérience gustative authentique et raffinée.
+                <p class="text-secondary mb-3">
+                    Nos produits sont soigneusement sélectionnés auprès de producteurs et artisans locaux avec lesquels nous partageons une même passion pour l'excellence et le terroir.
+                </p>
+                <p class="text-secondary mb-0">
+                    Dans une ambiance chaleureuse et raffinée, notre équipe vous accueille pour une expérience culinaire unique, entre lac et montagnes.
                 </p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 3. US2 : GALERIE PHOTOS DYNAMIQUES AVEC EFFET HOVER SUR LES TITRES -->
-<section class="section-padding bg-beige-light" id="galerie">
-    <div class="container">
-        <div class="text-center mb-5">
-            <span class="text-gold text-uppercase fw-bold tracking-wide">Gastronomie & Plaisir des Yeux</span>
-            <h2 class="font-heading fs-1 my-2">Nos Créations Signature</h2>
-            <p class="text-muted">Survolez les images pour découvrir le nom de nos spécialités.</p>
-        </div>
+<!-- 3. GALERIE GASTRONOMIQUE (US2) -->
+<section class="section-padding bg-cream py-5" id="galerie">
+    <div class="container text-center">
+        <h2 class="font-serif display-5 fw-bold text-dark-savoy mb-2">Galerie Gastronomique</h2>
+        <div class="gold-ornament mb-5">❊</div>
 
-        <!-- Grille des 5 photos de la galerie (US2) -->
+        <!-- Carousel / 3 Cards Grid -->
         <div class="row g-4 justify-content-center">
             
+            <!-- Card 1 : Omble Chevalier -->
             <div class="col-lg-4 col-md-6">
-                <div class="gallery-card shadow-sm">
-                    <img src="/assets/images/dishes/tartiflette.jpg" alt="Fondue Savoyarde aux 3 Fromages">
-                    <div class="gallery-overlay">
-                        <h3 class="gallery-title mb-0">Fondue Savoyarde aux 3 Fromages</h3>
+                <div class="gallery-card-container shadow-sm">
+                    <img src="/assets/images/dishes/omble.jpg" alt="Omble Chevalier" class="gallery-card-img">
+                    <div class="gallery-card-caption">
+                        <h3 class="font-serif text-white h4 mb-1">Omble Chevalier</h3>
+                        <p class="font-serif fst-italic text-gold mb-0 small">au beurre blanc de Savoie</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Card 2 : Raviole de Royans -->
             <div class="col-lg-4 col-md-6">
-                <div class="gallery-card shadow-sm">
-                    <img src="/assets/images/dishes/omble.jpg" alt="Omble Chevalier Poêlé">
-                    <div class="gallery-overlay">
-                        <h3 class="gallery-title mb-0">Omble Chevalier du Lac du Bourget</h3>
+                <div class="gallery-card-container shadow-sm">
+                    <img src="/assets/images/dishes/raviole.jpg" alt="Raviole de Royans" class="gallery-card-img">
+                    <div class="gallery-card-caption">
+                        <h3 class="font-serif text-white h4 mb-1">Raviole de Royans</h3>
+                        <p class="font-serif fst-italic text-gold mb-0 small">crème de morilles</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Card 3 : Délice chocolat tonka -->
             <div class="col-lg-4 col-md-6">
-                <div class="gallery-card shadow-sm">
-                    <img src="/assets/images/dishes/crozets.jpg" alt="Gratin de Crozets au Beaufort">
-                    <div class="gallery-overlay">
-                        <h3 class="gallery-title mb-0">Gratin de Crozets au Beaufort</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-6">
-                <div class="gallery-card shadow-sm">
-                    <img src="/assets/images/dishes/poret.jpg" alt="Filet Mignon de Porc des Bauges">
-                    <div class="gallery-overlay">
-                        <h3 class="gallery-title mb-0">Filet Mignon au Jus de Myrtilles</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6 col-md-6">
-                <div class="gallery-card shadow-sm">
-                    <img src="/assets/images/dishes/tarte-myrtille.jpg" alt="Tartelette aux Myrtilles Sauvages">
-                    <div class="gallery-overlay">
-                        <h3 class="gallery-title mb-0">Tartelette aux Myrtilles Sauvages</h3>
+                <div class="gallery-card-container shadow-sm">
+                    <img src="/assets/images/dishes/tonka.jpg" alt="Délice chocolat tonka" class="gallery-card-img">
+                    <div class="gallery-card-caption">
+                        <h3 class="font-serif text-white h4 mb-1">Délice chocolat tonka</h3>
+                        <p class="font-serif fst-italic text-gold mb-0 small">noisette du Piémont</p>
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <!-- 🌟 BOUTON CTA "RÉSERVER UNE TABLE" SITUÉ IMPÉRATIVEMENT SOUS LA GALERIE (EXIGENCE US2) -->
-        <div class="text-center mt-5">
-            <a href="/reservation" class="btn btn-gold btn-lg px-5 py-3 rounded-pill shadow-lg hover-scale fs-5">
-                <i class="fa-regular fa-calendar-check me-2"></i>Réserver une Table Dès Maintenant
+        <!-- BOUTON CTA SOUS LA GALERIE (EXIGENCE US2) -->
+        <div class="mt-5 pt-3">
+            <a href="/reservation" class="btn btn-dark-cta btn-lg px-5 py-3 rounded-2 text-uppercase font-serif">
+                <i class="fa-solid fa-bell me-2"></i>Réserver une table dès maintenant
             </a>
         </div>
-
     </div>
 </section>

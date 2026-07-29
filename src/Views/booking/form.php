@@ -1,121 +1,204 @@
 <!-- ========================================================= -->
-<!-- 📅 FORMULAIRE DE RÉSERVATION EN LIGNE - EXIGENCES US6 & US7 -->
+<!-- PAGE DISPOSITION 2 COLONNES CÔTÉ À CÔTÉ (EXACTE MAQUETTE) -->
 <!-- ========================================================= -->
 
-<!-- EN-TÊTE DE LA PAGE -->
-<section class="bg-dark-savoy text-white py-5 text-center">
-    <div class="container">
-        <h1 class="display-4 font-heading fw-bold text-uppercase">Réserver une Table</h1>
-        <p class="lead text-gold mb-0">Réservez votre table en quelques clics au Quai Antique.</p>
-    </div>
-</section>
-
-<!-- CONTENEUR DU FORMULAIRE -->
-<section class="section-padding bg-beige-light">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                
-                <div class="booking-card">
-                    <form id="booking-form" action="/reservation" method="POST">
-
-                        <!-- Message d'information convives -->
-                        <div class="alert alert-info border-0 shadow-sm mb-4">
-                            <i class="fa-solid fa-circle-info me-2 text-info"></i>
-                            Pour des réservations de plus de 8 personnes, veuillez nous contacter directement par téléphone au 04 79 00 00 00.
-                        </div>
-
-                        <!-- 1. NOMBRE DE COUVERTS (US6 & US7) -->
-                        <div class="mb-4">
-                            <label for="guests" class="form-label">
-                                <i class="fa-solid fa-users text-gold me-2"></i>Nombre de Couverts *
-                            </label>
-                            <!-- Auto-remplissage avec le nombre de convives par défaut si l'utilisateur est connecté (US7) -->
-                            <select class="form-select form-select-lg" id="guests" name="guests" required>
-                                <option value="" disabled selected>Choisissez le nombre de personnes</option>
-                                <option value="1">1 Personne</option>
-                                <option value="2" selected>2 Personnes</option>
-                                <option value="3">3 Personnes</option>
-                                <option value="4">4 Personnes</option>
-                                <option value="5">5 Personnes</option>
-                                <option value="6">6 Personnes</option>
-                                <option value="7">7 Personnes</option>
-                                <option value="8">8 Personnes</option>
-                            </select>
-                        </div>
-
-                        <!-- 2. CHOIX DE LA DATE -->
-                        <div class="mb-4">
-                            <label for="booking_date" class="form-label">
-                                <i class="fa-regular fa-calendar text-gold me-2"></i>Date de Réservation *
-                            </label>
-                            <input type="date" class="form-control form-control-lg" id="booking_date" name="booking_date" min="<?= date('Y-m-d') ?>" required>
-                        </div>
-
-                        <!-- 3. SÉLECTION DU SERVICE & HORAIRES PAR TRANCHES DE 15 MIN (US6) -->
-                        <div class="mb-4">
-                            <label class="form-label d-block">
-                                <i class="fa-regular fa-clock text-gold me-2"></i>Horaire Souhaité (Par tranches de 15 minutes) *
-                            </label>
-
-                            <!-- Service Déjeuner -->
-                            <div class="mb-3">
-                                <span class="fw-bold text-dark d-block mb-2">Service du Déjeuner (12:00 - 14:00) :</span>
-                                <div class="d-flex flex-wrap gap-2" id="slots-lunch">
-                                    <span class="time-slot-badge" data-time="12:00">12:00</span>
-                                    <span class="time-slot-badge" data-time="12:15">12:15</span>
-                                    <span class="time-slot-badge" data-time="12:30">12:30</span>
-                                    <span class="time-slot-badge" data-time="12:45">12:45</span>
-                                    <!-- La dernière heure de service (13:00 - 14:00) est grisée/exclue conformément à la règle de l'examen (US6) -->
-                                    <span class="time-slot-badge disabled" title="Dernière heure de service - Créneau non disponible">13:00 (Fermé)</span>
-                                    <span class="time-slot-badge disabled" title="Dernière heure de service - Créneau non disponible">13:15 (Fermé)</span>
-                                </div>
-                            </div>
-
-                            <!-- Service Dîner -->
-                            <div class="mb-3">
-                                <span class="fw-bold text-dark d-block mb-2">Service du Dîner (19:00 - 22:00) :</span>
-                                <div class="d-flex flex-wrap gap-2" id="slots-dinner">
-                                    <span class="time-slot-badge" data-time="19:00">19:00</span>
-                                    <span class="time-slot-badge" data-time="19:15">19:15</span>
-                                    <span class="time-slot-badge" data-time="19:30">19:30</span>
-                                    <span class="time-slot-badge" data-time="19:45">19:45</span>
-                                    <span class="time-slot-badge" data-time="20:00">20:00</span>
-                                    <span class="time-slot-badge" data-time="20:15">20:15</span>
-                                    <span class="time-slot-badge" data-time="20:30">20:30</span>
-                                    <span class="time-slot-badge" data-time="20:45">20:45</span>
-                                    <!-- Dernière heure de service de soir grisée -->
-                                    <span class="time-slot-badge disabled" title="Dernière heure de service - Créneau non disponible">21:00 (Fermé)</span>
-                                </div>
-                            </div>
-
-                            <!-- Champ caché pour enregistrer le créneau sélectionné -->
-                            <input type="hidden" id="booking_time" name="booking_time" required>
-                        </div>
-
-                        <!-- 4. ALLERGIES ALIMENTAIRES (US7) -->
-                        <div class="mb-4">
-                            <label for="allergies" class="form-label">
-                                <i class="fa-solid fa-wheat-awn-circle-exclamation text-gold me-2"></i>Allergies ou Régimes Particuliers (Optionnel)
-                            </label>
-                            <!-- Rempli automatiquement si le client a enregistré des allergies récurrentes dans son profil (US7) -->
-                            <textarea class="form-control" id="allergies" name="allergies" rows="3" placeholder="Ex: Allergie aux fruits à coque, intolérance au lactose, régime végétarien..."></textarea>
-                        </div>
-
-                        <!-- BOUTON DE SOUMISSION -->
-                        <div class="text-center mt-4">
-                            <button type="submit" class="btn btn-gold btn-lg w-100 py-3 rounded-pill fw-bold text-uppercase shadow-sm">
-                                <i class="fa-regular fa-paper-plane me-2"></i>Confirmer Ma Réservation
-                            </button>
-                        </div>
-
-                    </form>
+<div class="bg-cream py-5">
+    <div class="container-fluid px-lg-5" style="max-width: 1400px;">
+        
+        <!-- SECTION HAUTE : 2 COLONNES (MENUS DU CHEF À GAUCHE | SÉLECTION À LA CARTE À DROITE) -->
+        <div class="row g-4 align-items-stretch mb-5 position-relative">
+            
+            <!-- GAUCHE : MENUS DU CHEF -->
+            <div class="col-lg-5 pe-lg-4 border-end-lg">
+                <div class="text-center mb-4">
+                    <h2 class="font-serif fs-3 fw-bold text-dark-savoy text-uppercase mb-1">MENUS DU CHEF</h2>
+                    <div class="gold-ornament mb-2">❊</div>
                 </div>
 
-            </div>
-        </div>
-    </div>
-</section>
+                <div class="row g-3">
+                    <!-- Menu 1 : Saveurs de Savoie -->
+                    <div class="col-6">
+                        <div class="menu-formula-card p-3">
+                            <img src="/assets/images/m1.png" alt="Menu Saveurs de Savoie" class="menu-engraving-img img-fluid">
+                            <span class="font-serif fst-italic text-gold small d-block mb-1">Menu</span>
+                            <h3 class="font-serif fs-6 text-uppercase fw-bold text-dark-savoy mb-2">SAVEURS DE SAVOIE</h3>
+                            <div class="dish-price fs-5 text-gold fw-bold mb-2">38.00 €</div>
+                            <div class="gold-ornament small mb-2">❊</div>
+                            <p class="font-serif text-uppercase text-muted mb-1" style="font-size: 0.72rem;">FORMULE ENTRÉE + PLAT</p>
+                            <div class="fs-6 text-gold fw-bold">29.00 €</div>
+                        </div>
+                    </div>
 
-<!-- Inclusion du script JS d'interaction pour la réservation -->
-<script src="/assets/js/booking.js"></script>
+                    <!-- Menu 2 : Le Grand Quai -->
+                    <div class="col-6">
+                        <div class="menu-formula-card p-3">
+                            <img src="/assets/images/m2.png" alt="Menu Le Grand Quai" class="menu-engraving-img img-fluid">
+                            <span class="font-serif fst-italic text-gold small d-block mb-1">Menu</span>
+                            <h3 class="font-serif fs-6 text-uppercase fw-bold text-dark-savoy mb-2">LE GRAND QUAI</h3>
+                            <div class="dish-price fs-5 text-gold fw-bold mb-2">54.00 €</div>
+                            <div class="gold-ornament small mb-2">❊</div>
+                            <p class="font-serif text-uppercase text-muted mb-1" style="font-size: 0.72rem;">DÉGUSTATION EN 5 TEMPS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DROITE : SELECTION À LA CARTE -->
+            <div class="col-lg-7 ps-lg-4">
+                <div class="text-center mb-3">
+                    <h2 class="font-serif fs-3 fw-bold text-dark-savoy text-uppercase mb-1">SELECTION À LA CARTE</h2>
+                    <div class="gold-ornament mb-3">❊</div>
+                    
+                    <!-- Boutons Filtres Catégories -->
+                    <div class="d-flex justify-content-center flex-wrap gap-1 mb-4">
+                        <button class="category-btn-filter active px-2 py-1 small" data-category="all">TOUS</button>
+                        <button class="category-btn-filter px-2 py-1 small" data-category="entrees">ENTRÉES</button>
+                        <button class="category-btn-filter px-2 py-1 small" data-category="plats">PLATS PRINCIPAUX</button>
+                        <button class="category-btn-filter px-2 py-1 small" data-category="burgers">BURGERS</button>
+                        <button class="category-btn-filter px-2 py-1 small" data-category="desserts">DESSERTS</button>
+                        <button class="category-btn-filter px-2 py-1 small" data-category="boissons">BOISSONS</button>
+                    </div>
+                </div>
+
+                <!-- Grille 3 Plats côte à côte -->
+                <div class="row g-3 justify-content-center" id="dishesGrid2ColForm">
+                    <div class="col-md-4 dish-card-wrapper" data-category="entrees">
+                        <div class="dish-card-exact p-2">
+                            <img src="/assets/images/dishes/potimarron.jpg" alt="Velouté de Potimarron" style="height: 130px;">
+                            <h4 class="dish-title text-uppercase mt-2" style="font-size: 0.8rem;">VELOUTÉ DE POTIMARRON</h4>
+                            <div class="dish-price fs-6">14.50 €</div>
+                            <p class="dish-desc mb-0" style="font-size: 0.75rem; padding: 0 0.25rem;">Velouté onctueux de potimarron, crème de reblochon et graines torréfiées.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 dish-card-wrapper" data-category="plats">
+                        <div class="dish-card-exact p-2">
+                            <img src="/assets/images/dishes/fondue.jpg" alt="Fondue Savoyarde" style="height: 130px;">
+                            <h4 class="dish-title text-uppercase mt-2" style="font-size: 0.8rem;">FONDUE SAVOYARDE</h4>
+                            <div class="dish-price fs-6">26.50 €</div>
+                            <p class="dish-desc mb-0" style="font-size: 0.75rem; padding: 0 0.25rem;">Mélange de fromages savoyards AOP, pommes de terre et charcuterie locale.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 dish-card-wrapper" data-category="desserts">
+                        <div class="dish-card-exact p-2">
+                            <img src="/assets/images/dishes/tarte-myrtille.jpg" alt="Tarte aux Myrtilles" style="height: 130px;">
+                            <h4 class="dish-title text-uppercase mt-2" style="font-size: 0.8rem;">TARTE AUX MYRTILLES</h4>
+                            <div class="dish-price fs-6">9.50 €</div>
+                            <p class="dish-desc mb-0" style="font-size: 0.75rem; padding: 0 0.25rem;">Tarte maison aux myrtilles sauvages, crème d'amande et chantilly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 2. BARRE CTA CENTRÉE -->
+        <div class="text-center my-5">
+            <a href="#formulaire-reservation-block" class="btn-cta-bar text-decoration-none">
+                === RÉSERVER UNE TABLE DÈS MAINTENANT ===
+            </a>
+        </div>
+
+        <!-- 3. FORMULAIRE DE RÉSERVATION (EN DESSOUS) -->
+        <section class="mt-5 pt-3" id="formulaire-reservation-block">
+            <div class="text-center mb-4">
+                <h2 class="font-serif display-5 fw-bold text-dark-savoy text-uppercase mb-1">FORMULAIRE DE RÉSERVATION</h2>
+                <div class="gold-ornament mb-4">❊</div>
+            </div>
+
+            <!-- Cadre Global du Formulaire -->
+            <div class="booking-container-frame mx-auto" style="max-width: 960px;">
+                <form action="/api/reservation" method="POST" id="bookingFormDedicated">
+                    
+                    <!-- 1. INFORMATIONS PERSONNELLES -->
+                    <div class="booking-subblock-exact">
+                        <div class="booking-subblock-title-exact">
+                            <i class="fa-solid fa-user me-2 text-gold"></i>1. INFORMATIONS PERSONNELLES
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="name_res" class="form-label font-serif small fw-bold text-dark-savoy">Nom Complet <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control booking-input-exact" id="name_res" name="name" placeholder="Votre nom complet" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email_res" class="form-label font-serif small fw-bold text-dark-savoy">Adresse Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control booking-input-exact" id="email_res" name="email" placeholder="exemple@email.com" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. CONVIVES & DATE -->
+                    <div class="booking-subblock-exact">
+                        <div class="booking-subblock-title-exact">
+                            <i class="fa-solid fa-users me-2 text-gold"></i>2. CONVIVES & DATE
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label for="guests_res" class="form-label font-serif small fw-bold text-dark-savoy">Nombre de couverts <span class="text-danger">*</span></label>
+                                <select class="form-select booking-input-exact" id="guests_res" name="guests" required>
+                                    <option value="" selected disabled>Sélectionnez</option>
+                                    <option value="1">1 Personne</option>
+                                    <option value="2">2 Personnes</option>
+                                    <option value="3">3 Personnes</option>
+                                    <option value="4">4 Personnes</option>
+                                    <option value="5">5 Personnes</option>
+                                    <option value="6">6 Personnes</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="date_res" class="form-label font-serif small fw-bold text-dark-savoy">Date <span class="text-danger">*</span></label>
+                                <input type="date" class="form-control booking-input-exact" id="date_res" name="date" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="service_res" class="form-label font-serif small fw-bold text-dark-savoy">Service <span class="text-danger">*</span></label>
+                                <select class="form-select booking-input-exact" id="service_res" name="service" required>
+                                    <option value="" selected disabled>Choisissez un service</option>
+                                    <option value="lunch">Déjeuner (Midi)</option>
+                                    <option value="dinner">Dîner (Soir)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. HORAIRE D'ARRIVÉE -->
+                    <div class="booking-subblock-exact">
+                        <div class="booking-subblock-title-exact">
+                            <i class="fa-regular fa-clock me-2 text-gold"></i>3. HORAIRE D'ARRIVÉE <span class="fw-normal text-muted small">(TRANCHES DE 15 MIN - EXCL. DERNIÈRE HEURE)</span>
+                        </div>
+                        <div class="d-flex flex-wrap gap-2 mb-2">
+                            <button type="button" class="time-slot-badge-exact">12:00</button>
+                            <button type="button" class="time-slot-badge-exact">12:15</button>
+                            <button type="button" class="time-slot-badge-exact">12:30</button>
+                            <button type="button" class="time-slot-badge-exact">12:45</button>
+                            <button type="button" class="time-slot-badge-exact">13:00</button>
+                            <button type="button" class="time-slot-badge-exact">13:15</button>
+                            <button type="button" class="time-slot-badge-exact">13:30</button>
+                            <button type="button" class="time-slot-badge-exact disabled">13:45 ✕</button>
+                            <button type="button" class="time-slot-badge-exact disabled">14:00 ✕</button>
+                        </div>
+                        <p class="font-serif fst-italic text-muted small mb-0">Les créneaux de la dernière heure ne sont pas disponibles.</p>
+                    </div>
+
+                    <!-- 4. ALLERGIES & REMARQUES -->
+                    <div class="booking-subblock-exact">
+                        <div class="booking-subblock-title-exact">
+                            <i class="fa-regular fa-clipboard me-2 text-gold"></i>4. ALLERGIES & REMARQUES
+                        </div>
+                        <p class="font-serif small text-muted mb-2">Indiquez ici vos allergies alimentaires ou toute autre remarque</p>
+                        <textarea class="form-control booking-input-exact" id="allergies_res" name="allergies" rows="4" placeholder="Votre message..."></textarea>
+                    </div>
+
+                    <!-- BOUTON DE CONFIRMATION CTA -->
+                    <div class="mt-4">
+                        <button type="submit" class="btn-confirm-reservation">
+                            === CONFIRMER MA RÉSERVATION ===
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+    </div>
+</div>

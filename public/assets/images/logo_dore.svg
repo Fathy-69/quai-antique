@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" width="100%" height="100%">
+  <!-- Définition du style et des couleurs -->
+  <defs>
+    <style>
+      .logo-color { fill: #906427; }
+      .logo-stroke { 
+        stroke: #906427; 
+        stroke-width: 10; 
+        stroke-linecap: round; 
+        fill: none; 
+      }
+    </style>
+  </defs>
+
+  <!-- Barre de gauche -->
+  <rect x="35" y="45" width="14" height="45" rx="4" class="logo-color" />
+  
+  <!-- Barre centrale (la plus haute) -->
+  <rect x="68" y="25" width="14" height="65" rx="4" class="logo-color" />
+  
+  <!-- Barre de droite (la plus petite) -->
+  <rect x="101" y="55" width="14" height="35" rx="4" class="logo-color" />
+
+  <!-- Base incurvée en dessous -->
+  <path d="M 22 110 Q 75 102 128 110" class="logo-stroke" />
+</svg>
