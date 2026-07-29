@@ -1,76 +1,47 @@
 /**
- * RESTAURANT QUAI ANTIQUE - MAIN JAVASCRIPT
- * Interactions UI, Filtrage de la Carte (US3) et Animations
+ * QUAI ANTIQUE - LOGIQUE JAVASCRIPT FRONT-END INTERACTIVE
  */
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. FILTRAGE INTERACTIF PAR CATÉGORIES (US3)
+    const categoryButtons = document.querySelectorAll('.category-btn-filter');
+    const dishCards = document.querySelectorAll('.dish-card-wrapper');
 
-    // =========================================================
-    // 1. FILTRAGE DYNAMIQUE DE LA CARTE DES PLATS (EXIGENCE US3)
-    // =========================================================
-    const filterButtons = document.querySelectorAll('.category-filter-btn');
-    const dishItems = document.querySelectorAll('.dish-item');
+    if (categoryButtons.length > 0) {
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Retirer la classe active de tous les boutons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Ajouter la classe active au bouton cliqué
+                button.classList.add('active');
 
-    if (filterButtons.length > 0 && dishItems.length > 0) {
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function () {
-                // Activer le bouton cliqué et désactiver les autres
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
+                const selectedCategory = button.getAttribute('data-category');
 
-                const filterValue = this.getAttribute('data-filter');
-
-                // Filtrer les cartes de plats selon la catégorie
-                dishItems.forEach(item => {
-                    const itemCategory = item.getAttribute('data-category');
-
-                    if (filterValue === 'all' || filterValue === itemCategory) {
-                        item.style.display = 'block';
-                        // Effet d'apparition fluide
-                        item.style.opacity = '1';
-                        item.style.transform = 'scale(1)';
+                // Filtrer les cartes de plats
+                dishCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (selectedCategory === 'all' || cardCategory === selectedCategory) {
+                        card.style.display = 'block';
+                        card.classList.add('fade-in');
                     } else {
-                        item.style.display = 'none';
-                        item.style.opacity = '0';
-                        item.style.transform = 'scale(0.95)';
+                        card.style.display = 'none';
                     }
                 });
             });
         });
     }
 
-    // =========================================================
-    // 2. EFFET D'EN-TÊTE STICKY AU DÉFILEMENT (NAVBAR SHADOW)
-    // =========================================================
-    const headerElement = document.querySelector('header');
-    
-    if (headerElement) {
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 50) {
-                headerElement.classList.add('shadow');
-            } else {
-                headerElement.classList.remove('shadow');
-            }
-        });
-    }
-
-    // =========================================================
-    // 3. DÉFILEMENT DOUX POUR LES LIENS D'ANCRE (#galerie, #carte)
-    // =========================================================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href');
-            if (targetId !== '#') {
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    e.preventDefault();
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            }
-        });
+    // 2. GESTION DES BADGES D'HEURES DANS LE FORMULAIRE DE RÉSERVATION (US6)
+    const timeSlotBadges = document.querySelectorAll('.time-slot-badge-exact');
+    timeSlotBadges.forEach(badge => {
+        if (!badge.classList.contains('disabled')) {
+            badge.addEventListener('click', () => {
+                timeSlotBadges.forEach(b => b.classList.remove('selected'));
+                badge.classList.add('selected');
+            });
+        }
     });
 
 });
