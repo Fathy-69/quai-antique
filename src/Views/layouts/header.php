@@ -12,7 +12,7 @@ $current_page = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     <!-- Google Fonts Officiel : Cinzel & Lora (Titres Serif) + Hind Madurai (Corps) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Hind+Madurai:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Hind+Madurai:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
     
     <!-- Framework CSS Bootstrap 5 & FontAwesome -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,8 +26,8 @@ $current_page = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         <nav class="navbar navbar-expand-lg navbar-dark py-2">
             <div class="container">
                 
-                <!-- Logo Transparent Vectoriel SVG -->
-                <a class="navbar-brand d-flex align-items-center me-4" href="/">
+                <!-- Logo Transparent Calligraphique Authentique -->
+                <a class="navbar-brand" href="/">
                     <img src="/assets/images/logo_authentic.svg" alt="Quai Antique Logo" style="height: 64px; width: auto; object-fit: contain;">
                 </a>
 
