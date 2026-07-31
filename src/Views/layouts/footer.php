@@ -1,17 +1,17 @@
     <!-- FOOTER MAQUETTE EXACTE AVEC LOGO VECTORIEL TRANSPARENT (US5) -->
     <footer class="footer-quai pt-5 pb-3">
         <div class="container">
-            <div class="row g-4 pb-4 border-bottom-dark">
+            <div class="row g-4 pb-4 border-bottom-dark text-center text-lg-start">
                 
                 <!-- Col 1 : Logo Transparent & Presentation -->
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-4 col-md-6 border-end-lg custom-border-gold px-lg-4 text-center">
                     <a href="/" class="text-decoration-none d-block mb-3">
-                        <img src="/assets/images/logo_authentic.svg" alt="Quai Antique Logo" style="height: 58px; width: auto; object-fit: contain;">
+                        <img src="/assets/images/logo_authentic.svg" alt="Quai Antique Logo" style="height: 70px; width: auto; object-fit: contain;">
                     </a>
-                    <p class="text-secondary small pe-lg-4 mb-4">
-                        Cuisine savoyarde authentique au bord du lac, dans un cadre chaleureux et convivial.
+                    <p class="text-secondary small mb-4 font-serif">
+                        Une cuisine gastronomique inspirée par le terroir savoyard, entre tradition et modernité.
                     </p>
-                    <div class="d-flex gap-3 social-links">
+                    <div class="d-flex justify-content-center gap-3 social-links">
                         <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://tripadvisor.com" target="_blank" rel="noopener" class="social-icon" aria-label="TripAdvisor"><i class="fa-solid fa-leaf"></i></a>
@@ -19,39 +19,46 @@
                 </div>
 
                 <!-- Col 2 : Horaires d'ouverture (US5) -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="d-flex align-items-center gap-2 text-gold mb-2">
-                        <i class="fa-regular fa-clock fs-5"></i>
-                        <h5 class="font-serif text-uppercase text-gold fs-6 mb-0">Horaires d'ouverture</h5>
+                <div class="col-lg-4 col-md-6 border-end-lg custom-border-gold px-lg-4">
+                    <div class="text-center mb-3">
+                        <h5 class="font-serif text-uppercase text-cream fs-6 mb-1">Horaires d'ouverture</h5>
+                        <div class="gold-ornament" style="font-size: 0.6rem;">❊</div>
                     </div>
                     <div id="footer-opening-hours" class="small text-secondary mt-3">
                         <table class="w-100 footer-hours-table">
-                            <tr><td>Lundi</td><td class="text-end text-gold">Fermé</td></tr>
-                            <tr><td>Mardi</td><td class="text-end">12h00 - 14h00 / 19h00 - 22h00</td></tr>
-                            <tr><td>Mercredi</td><td class="text-end">Fermé</td></tr>
-                            <tr><td>Jeudi</td><td class="text-end">12h00 - 14h00 / 19h00 - 22h00</td></tr>
-                            <tr><td>Vendredi</td><td class="text-end">12h00 - 14h00 / 19h00 - 22h00</td></tr>
-                            <tr><td>Samedi</td><td class="text-end"> 19h00 - 23h00</td></tr>
-                            <tr><td>Dimanche</td><td class="text-end">12h00 - 14h00 </td></tr>
+                            <tr><td><i class="fa-regular fa-clock text-gold me-2"></i>Lun, Mar, Jeu, Ven</td><td class="text-end">12h00 - 14h00<br>19h00 - 22h00</td></tr>
+                            <tr><td><i class="fa-regular fa-clock text-gold me-2"></i>Mercredi</td><td class="text-end text-gold">Fermé</td></tr>
+                            <tr><td><i class="fa-regular fa-clock text-gold me-2"></i>Samedi</td><td class="text-end">19h00 - 23h00</td></tr>
+                            <tr><td><i class="fa-regular fa-clock text-gold me-2"></i>Dimanche</td><td class="text-end">12h00 - 14h00</td></tr>
                         </table>
-                        <p class="fst-italic text-muted small mt-2 mb-0">Horaires susceptibles d'être modifiés.</p>
                     </div>
                 </div>
 
                 <!-- Col 3 : Contact & Accès -->
-                <div class="col-lg-4 col-md-12">
-                    <div class="d-flex align-items-center gap-2 text-gold mb-2">
-                        <i class="fa-solid fa-location-dot fs-5"></i>
-                        <h5 class="font-serif text-uppercase text-gold fs-6 mb-0">Contact & Accès</h5>
+                <div class="col-lg-4 col-md-12 px-lg-4">
+                    <div class="text-center mb-3">
+                        <h5 class="font-serif text-uppercase text-cream fs-6 mb-1">Contact & Accès</h5>
+                        <div class="gold-ornament" style="font-size: 0.6rem;">❊</div>
                     </div>
                     <ul class="list-unstyled small text-secondary mt-3 mb-4">
-                        <li class="mb-2"><i class="fa-solid fa-house text-gold me-2"></i> 123 Quai des Pêcheurs, 73310 Chindrieux, France</li>
-                        <li class="mb-2"><i class="fa-solid fa-phone text-gold me-2"></i> <a href="tel:0479624567" class="text-secondary text-decoration-none">04 79 62 45 67</a></li>
-                        <li class="mb-2"><i class="fa-solid fa-envelope text-gold me-2"></i> <a href="mailto:contact@quaiantique.fr" class="text-secondary text-decoration-none">contact@quaiantique.fr</a></li>
+                        <li class="mb-3 d-flex align-items-start gap-2">
+                            <i class="fa-solid fa-location-dot text-gold mt-1"></i> 
+                            <span>15 Quai de la Promenade<br>74000 Annecy</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-phone text-gold"></i> 
+                            <a href="tel:0450123456" class="text-secondary text-decoration-none">04 50 123 456</a>
+                        </li>
+                        <li class="mb-4 d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-envelope text-gold"></i> 
+                            <a href="mailto:contact@quai-antique.com" class="text-secondary text-decoration-none">contact@quai-antique.com</a>
+                        </li>
                     </ul>
-                    <a href="/reservation" class="btn btn-outline-gold btn-sm px-4 py-2 text-capitalize rounded-1 font-serif text-decoration-none">
-                        Voir sur la carte
-                    </a>
+                    <div class="text-center text-lg-start">
+                        <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm px-4 py-2 text-uppercase rounded-1 font-serif fw-bold text-decoration-none">
+                            <i class="fa-solid fa-location-dot me-2"></i>Nous trouver
+                        </a>
+                    </div>
                 </div>
 
             </div>
