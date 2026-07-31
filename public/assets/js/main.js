@@ -120,3 +120,16 @@ function initReservationSlots() {
         }
     });
 }
+
+// Initialiser explicitement le carrousel principal
+document.addEventListener('DOMContentLoaded', function() {
+    var myCarousel = document.getElementById('heroCarousel');
+    if (myCarousel) {
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 5000,
+            ride: 'carousel',
+            pause: 'hover'
+        });
+        carousel.cycle();
+    }
+});
