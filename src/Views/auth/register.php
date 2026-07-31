@@ -1,6 +1,4 @@
-<!-- ========================================================= -->
 <!--  FORMULAIRE D'INSCRIPTION CLIENT (CONVIVES & ALLERGIES) - US7 -->
-<!-- ========================================================= -->
 
 <section class="section-padding bg-beige-light">
     <div class="container">

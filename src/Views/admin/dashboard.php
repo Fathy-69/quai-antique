@@ -1,6 +1,5 @@
-<!-- ========================================================= -->
 <!--  DASHBOARD BACK-OFFICE ADMINISTRATION (HÔTE D'ACCUEIL) -->
-<!-- ========================================================= -->
+
 
 <div class="container-fluid py-4">
     <div class="row">

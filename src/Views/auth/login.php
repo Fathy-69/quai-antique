@@ -1,6 +1,4 @@
-<!-- ========================================================= -->
 <!--  FORMULAIRE DE CONNEXION UNIQUE (CLIENT / ADMIN) - US1 -->
-<!-- ========================================================= -->
 
 <section class="section-padding bg-beige-light">
     <div class="container">
