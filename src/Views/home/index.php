@@ -1,25 +1,65 @@
+<!-- ========================================================= -->
 <!-- PAGE D'ACCUEIL - CONFORME À LA MAQUETTE EXACTE DU SUJET -->
+<!-- ========================================================= -->
 
-<!-- 1. HERO BANNER -->
-<section class="hero-banner d-flex align-items-center justify-content-center text-center">
-    <div class="container py-5">
-        <span class="hero-tagline text-uppercase text-gold font-serif letter-spacing-2 mb-2 d-block">Restaurant</span>
-        <h1 class="hero-main-title text-uppercase font-serif text-white display-2 fw-bold mb-3">
-            Quai Antique
-        </h1>
-        <p class="hero-subtext font-serif fst-italic text-white-50 fs-4 mb-5">
-            La promesse d'un voyage culinaire savoyard
-        </p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-            <a href="/reservation" class="btn btn-gold btn-lg px-4 py-3 rounded-1 text-uppercase fw-bold font-serif">
-                <i class="fa-regular fa-calendar-check me-2"></i>Réserver une table
-            </a>
-            <a href="/menus" class="btn btn-glass btn-lg px-4 py-3 rounded-1 text-uppercase fw-bold font-serif">
-                <i class="fa-solid fa-book-open me-2"></i>Découvrir la carte
-            </a>
+<!-- 1. HERO BANNER CAROUSEL -->
+<header id="heroCarousel" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background: linear-gradient(rgba(57, 44, 30, 0.75), rgba(57, 44, 30, 0.85)), url('/assets/images/quai_antique_hero.jpg') center/cover no-repeat; min-height: 75vh;">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100 py-5">
+                <span class="badge bg-warning text-dark px-3 py-2 text-uppercase font-sans mb-3" style="letter-spacing: 1px;">Savoie & Gastronomie</span>
+                <h1 class="hero-title mb-3 text-white display-2 font-serif text-uppercase fw-bold">Restaurant Quai Antique</h1>
+                <p class="fs-4 font-serif fst-italic mb-4 max-w-700 mx-auto text-light">"La promesse d'un voyage authentique et gourmand à travers l'univers culinaire savoyard."</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="/reservation" class="btn btn-gold btn-lg px-4 py-3 rounded-1 text-uppercase fw-bold font-serif"><i class="fa-regular fa-calendar-check me-2"></i> Réserver une Table</a>
+                    <a href="/menus" class="btn btn-glass btn-lg px-4 py-3 rounded-1 text-uppercase fw-bold font-serif"><i class="fa-solid fa-book-open me-2"></i> Découvrir la Carte</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background: linear-gradient(rgba(57, 44, 30, 0.75), rgba(57, 44, 30, 0.85)), url('/assets/images/dish_fondue.jpg') center/cover no-repeat; min-height: 75vh;">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100 py-5">
+                <span class="badge bg-warning text-dark px-3 py-2 text-uppercase font-sans mb-3" style="letter-spacing: 1px;">Terroir & Tradition</span>
+                <h1 class="hero-title mb-3 text-white display-2 font-serif text-uppercase fw-bold">Cuisine Fait Maison</h1>
+                <p class="fs-4 font-serif fst-italic mb-4 max-w-700 mx-auto text-light">"Des fromages affinés AOP, des produits frais du jour et la créativité du Chef Arnaud Michant."</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="/menus" class="btn btn-glass btn-lg px-4 py-3 rounded-1 text-uppercase fw-bold font-serif"><i class="fa-solid fa-book-open me-2"></i> Nos Menus & Plats</a>
+                    <a href="/reservation" class="btn btn-gold btn-lg px-4 py-3 rounded-1 text-uppercase fw-bold font-serif"><i class="fa-regular fa-calendar-check me-2"></i> Réserver une Table</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background: linear-gradient(rgba(57, 44, 30, 0.75), rgba(57, 44, 30, 0.85)), url('/assets/images/dish_tartiflette.jpg') center/cover no-repeat; min-height: 75vh;">
+            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center h-100 py-5">
+                <span class="badge bg-warning text-dark px-3 py-2 text-uppercase font-sans mb-3" style="letter-spacing: 1px;">Accueillant & Chaleureux</span>
+                <h1 class="hero-title mb-3 text-white display-2 font-serif text-uppercase fw-bold">Expérience Culinaire Unique</h1>
+                <p class="fs-4 font-serif fst-italic mb-4 max-w-700 mx-auto text-light">"Bienvenue au Quai Antique — Déjeuner et Dîner aux couleurs des Alpes."</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="/reservation" class="btn btn-gold btn-lg px-4 py-3 rounded-1 text-uppercase fw-bold font-serif"><i class="fa-regular fa-calendar-check me-2"></i> Réserver Dès Maintenant</a>
+                </div>
+            </div>
         </div>
     </div>
-</section>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Précédent</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Suivant</span>
+    </button>
+</header>
 
 <!-- 2. SECTION LE CHEF & LA VISION -->
 <section class="section-padding bg-cream py-5">
@@ -36,152 +76,97 @@
                 <div class="gold-ornament mb-4">❊</div>
                 
                 <p class="lead text-dark-savoy mb-3">
-                    Au Quai Antique, le Chef Arnaud Michant sublime les trésors de la Savoie à travers une cuisine gastronomique et authentique.
+                    "Passionné par les producteurs locaux et le terroir alpin, je mets un point d'honneur à sublimer chaque ingrédient avec rigueur et créativité."
                 </p>
-                <p class="text-secondary mb-3">
-                    Nos produits sont soigneusement sélectionnés auprès de producteurs et artisans locaux avec lesquels nous partageons une même passion pour l'excellence et le terroir.
+                <p class="text-secondary mb-4">
+                    Installé à Chambéry, le troisième établissement du Chef Arnaud Michant vous accueille dans une ambiance chaleureuse et raffinée. Une cuisine sans artifice où les produits de la Savoie sont mis à l'honneur lors du déjeuner comme du dîner.
                 </p>
-                <p class="text-secondary mb-0">
-                    Dans une ambiance chaleureuse et raffinée, notre équipe vous accueille pour une expérience culinaire unique, entre lac et montagnes.
-                </p>
+                <div class="d-flex gap-4">
+                    <div class="d-flex align-items-center bg-white p-3 rounded-3 shadow-sm border border-light w-100">
+                        <i class="fa-solid fa-leaf text-gold fs-2 me-3"></i>
+                        <div>
+                            <strong class="d-block text-dark">100% Terroir</strong>
+                            <small class="text-muted">Producteurs savoyards</small>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center bg-white p-3 rounded-3 shadow-sm border border-light w-100">
+                        <i class="fa-solid fa-utensils text-gold fs-2 me-3"></i>
+                        <div>
+                            <strong class="d-block text-dark">Cuisine Fait Maison</strong>
+                            <small class="text-muted">Produits frais du jour</small>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 3. GALERIE GASTRONOMIQUE (US2 - CARROUSEL INTERACTIF DE 9 PLATS) -->
-<section class="section-padding bg-cream py-5" id="galerie">
-    <div class="container text-center position-relative px-4 px-md-5">
-        <h2 class="font-serif display-5 fw-bold text-dark-savoy mb-2">Galerie Gastronomique</h2>
-        <p class="font-serif fst-italic text-muted mb-1">Découvrez la richesse culinaire savoyarde du Chef Arnaud Michant</p>
-        <div class="gold-ornament mb-4">❊</div>
-
-        <!-- Système de défilement (Bootstrap 5 Carousel) avec 9 photos de plats en 3 diapos -->
-        <div id="gastronomicGalleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-            
-            <!-- Diapositives du carrousel -->
-            <div class="carousel-inner">
-                
-                <!-- SLIDE 1 : Plats d'Exception 1, 2, 3 -->
-                <div class="carousel-item active">
-                    <div class="row g-4 justify-content-center">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="gallery-card-container shadow-sm">
-                                <img src="/assets/images/dishes/omble.jpg" alt="Omble Chevalier" class="gallery-card-img">
-                                <div class="gallery-card-caption">
-                                    <h3 class="font-serif text-white h4 mb-1">Omble Chevalier</h3>
-                                    <p class="font-serif fst-italic text-gold mb-0 small">au beurre blanc de Savoie</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="gallery-card-container shadow-sm">
-                                <img src="/assets/images/dishes/raviole.jpg" alt="Raviole de Royans" class="gallery-card-img">
-                                <div class="gallery-card-caption">
-                                    <h3 class="font-serif text-white h4 mb-1">Raviole de Royans</h3>
-                                    <p class="font-serif fst-italic text-gold mb-0 small">crème de morilles</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="gallery-card-container shadow-sm">
-                                <img src="/assets/images/dishes/tonka.jpg" alt="Délice chocolat tonka" class="gallery-card-img">
-                                <div class="gallery-card-caption">
-                                    <h3 class="font-serif text-white h4 mb-1">Délice chocolat tonka</h3>
-                                    <p class="font-serif fst-italic text-gold mb-0 small">noisette du Piémont</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SLIDE 2 : Plats d'Exception 4, 5, 6 -->
-                <div class="carousel-item">
-                    <div class="row g-4 justify-content-center">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="gallery-card-container shadow-sm">
-                                <img src="/assets/images/dishes/tartiflette-tradition.jpg" alt="Tartiflette au Reblochon AOP" class="gallery-card-img">
-                                <div class="gallery-card-caption">
-                                    <h3 class="font-serif text-white h4 mb-1">Tartiflette Reblochon AOP</h3>
-                                    <p class="font-serif fst-italic text-gold mb-0 small">gratin traditionnel croustillant</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="gallery-card-container shadow-sm">
-                                <img src="/assets/images/dishes/filet-perche.jpg" alt="Filets de Perche du Lac" class="gallery-card-img">
-                                <div class="gallery-card-caption">
-                                    <h3 class="font-serif text-white h4 mb-1">Filets de Perche du Lac</h3>
-                                    <p class="font-serif fst-italic text-gold mb-0 small">beurre citronné et persil frais</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="gallery-card-container shadow-sm">
-                                <img src="/assets/images/dishes/diots-au-vin.jpg" alt="Diots de Savoie" class="gallery-card-img">
-                                <div class="gallery-card-caption">
-                                    <h3 class="font-serif text-white h4 mb-1">Diots de Savoie</h3>
-                                    <p class="font-serif fst-italic text-gold mb-0 small">au vin blanc Mondeuse & polenta</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SLIDE 3 : Plats d'Exception 7, 8, 9 -->
-                <div class="carousel-item">
-                    <div class="row g-4 justify-content-center">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="gallery-card-container shadow-sm">
-                                <img src="/assets/images/dishes/gaufre-savoyarde.jpg" alt="Gaufre aux Myrtilles Sauvages" class="gallery-card-img">
-                                <div class="gallery-card-caption">
-                                    <h3 class="font-serif text-white h4 mb-1">Gaufre aux Myrtilles</h3>
-                                    <p class="font-serif fst-italic text-gold mb-0 small">coulis maison et chantilly</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="gallery-card-container shadow-sm">
-                                <img src="/assets/images/dishes/potimarron.jpg" alt="Velouté de Potimarron" class="gallery-card-img">
-                                <div class="gallery-card-caption">
-                                    <h3 class="font-serif text-white h4 mb-1">Velouté de Potimarron</h3>
-                                    <p class="font-serif fst-italic text-gold mb-0 small">crème de reblochon & graines</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="gallery-card-container shadow-sm">
-                                <img src="/assets/images/dishes/fondue.jpg" alt="Fondue Savoyarde AOP" class="gallery-card-img">
-                                <div class="gallery-card-caption">
-                                    <h3 class="font-serif text-white h4 mb-1">Fondue Savoyarde AOP</h3>
-                                    <p class="font-serif fst-italic text-gold mb-0 small">fromages affinés & charcuterie</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Boutons de contrôle (Précédent / Suivant) -->
-            <button class="carousel-gallery-control prev" type="button" data-bs-target="#gastronomicGalleryCarousel" data-bs-slide="prev" aria-label="Précédent">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <button class="carousel-gallery-control next" type="button" data-bs-target="#gastronomicGalleryCarousel" data-bs-slide="next" aria-label="Suivant">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
-
-            <!-- Indicateurs de carrousel -->
-            <div class="carousel-indicators carousel-indicators-gold">
-                <button type="button" data-bs-target="#gastronomicGalleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#gastronomicGalleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#gastronomicGalleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-
+<!-- 3. GALERIE GASTRONOMIQUE (STRUCTURE DEMANDEE) -->
+<section class="py-5 bg-cream" id="galerie">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <span class="text-uppercase text-dark-gold font-serif fw-bold">Galerie Gastronomique</span>
+            <h2 class="font-serif display-5 fw-bold text-dark-savoy mb-2">Nos Créations Culinaires</h2>
+            <p class="font-serif fst-italic text-muted">Survolez chaque photo pour découvrir le nom du plat.</p>
+            <div class="gold-ornament mb-4">❊</div>
         </div>
 
-        <!-- BOUTON CTA SOUS LA GALERIE (EXIGENCE US2) -->
-        <div class="mt-5 pt-3">
+        <div class="row g-4 justify-content-center">
+            <!-- Ligne 1 : 3 images -->
+            <div class="col-md-4">
+                <div class="gallery-card" tabindex="0" role="button">
+                    <img src="/assets/images/dishes/fondue.jpg" alt="Fondue Savoyarde aux trois fromages affinés" class="gallery-card-img">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-overlay-title">Fondue Savoyarde</h3>
+                        <p class="font-serif fst-italic text-gold mb-0 small">aux trois fromages affinés</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="gallery-card" tabindex="0" role="button">
+                    <img src="/assets/images/dishes/tartiflette.jpg" alt="Tartiflette revisitée au Reblochon fermier" class="gallery-card-img">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-overlay-title">Tartiflette revisitée</h3>
+                        <p class="font-serif fst-italic text-gold mb-0 small">au Reblochon fermier</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="gallery-card" tabindex="0" role="button">
+                    <img src="/assets/images/dishes/filet-perche.jpg" alt="Filets de perche meunière du Lac du Bourget" class="gallery-card-img">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-overlay-title">Filets de perche meunière</h3>
+                        <p class="font-serif fst-italic text-gold mb-0 small">du Lac du Bourget</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ligne 2 : 2 images -->
+            <div class="col-md-6">
+                <div class="gallery-card" tabindex="0" role="button">
+                    <img src="/assets/images/dishes/tarte-myrtille.png" alt="Tarte fine aux myrtilles sauvages des Bauges" class="gallery-card-img">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-overlay-title">Tarte fine aux myrtilles</h3>
+                        <p class="font-serif fst-italic text-gold mb-0 small">sauvages des Bauges</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="gallery-card" tabindex="0" role="button">
+                    <img src="/assets/images/quai_antique_hero.jpg" alt="Ambiance chaleureuse du restaurant Quai Antique" class="gallery-card-img">
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-overlay-title">Ambiance chaleureuse</h3>
+                        <p class="font-serif fst-italic text-gold mb-0 small">du restaurant Quai Antique</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5 text-center pt-3">
             <a href="/reservation" class="btn btn-dark-cta btn-lg px-5 py-3 rounded-2 text-uppercase font-serif">
                 <i class="fa-solid fa-bell me-2"></i>Réserver une table dès maintenant
             </a>

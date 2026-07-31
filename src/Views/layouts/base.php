@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * GABARIT PRINCIPAL (LAYOUT BASE)
  * 
