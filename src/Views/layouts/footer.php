@@ -28,11 +28,11 @@
                         <table class="w-100 footer-hours-table">
                             <tr><td>Lundi</td><td class="text-end text-gold">Fermé</td></tr>
                             <tr><td>Mardi</td><td class="text-end">12h00 - 14h00 / 19h00 - 22h00</td></tr>
-                            <tr><td>Mercredi</td><td class="text-end">12h00 - 14h00 / 19h00 - 22h00</td></tr>
+                            <tr><td>Mercredi</td><td class="text-end">Fermé</td></tr>
                             <tr><td>Jeudi</td><td class="text-end">12h00 - 14h00 / 19h00 - 22h00</td></tr>
-                            <tr><td>Vendredi</td><td class="text-end">12h00 - 14h00 / 19h00 - 23h00</td></tr>
-                            <tr><td>Samedi</td><td class="text-end">12h00 - 14h00 / 19h00 - 23h00</td></tr>
-                            <tr><td>Dimanche</td><td class="text-end">12h00 - 14h00 / 19h00 - 22h00</td></tr>
+                            <tr><td>Vendredi</td><td class="text-end">12h00 - 14h00 / 19h00 - 22h00</td></tr>
+                            <tr><td>Samedi</td><td class="text-end"> 19h00 - 23h00</td></tr>
+                            <tr><td>Dimanche</td><td class="text-end">12h00 - 14h00 </td></tr>
                         </table>
                         <p class="fst-italic text-muted small mt-2 mb-0">Horaires susceptibles d'être modifiés.</p>
                     </div>
