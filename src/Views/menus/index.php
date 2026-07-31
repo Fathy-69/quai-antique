@@ -93,7 +93,7 @@
                 <!-- Plat 3 : Tarte aux Myrtilles -->
                 <div class="col-lg-4 col-md-6 dish-card-wrapper" data-category="desserts">
                     <div class="dish-card-exact">
-                        <img src="/assets/images/dishes/tarte-myrtille.jpg" alt="Tarte aux Myrtilles">
+                        <img src="/assets/images/dishes/tarte-myrtille.png" alt="Tarte aux Myrtilles">
                         <h3 class="dish-title text-uppercase">Tarte aux Myrtilles</h3>
                         <div class="dish-price">9.50 €</div>
                         <p class="dish-desc">
