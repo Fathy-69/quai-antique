@@ -82,7 +82,7 @@
 
                     <div class="col-md-4 dish-card-wrapper" data-category="desserts">
                         <div class="dish-card-exact p-2">
-                            <img src="/assets/images/dishes/tarte-myrtille.jpg" alt="Tarte aux Myrtilles" style="height: 130px;">
+                            <img src="/assets/images/dishes/tarte-myrtille.png" alt="Tarte aux Myrtilles" style="height: 130px;">
                             <h4 class="dish-title text-uppercase mt-2" style="font-size: 0.8rem;">TARTE AUX MYRTILLES</h4>
                             <div class="dish-price fs-6">9.50 €</div>
                             <p class="dish-desc mb-0" style="font-size: 0.75rem; padding: 0 0.25rem;">Tarte maison aux myrtilles sauvages, crème d'amande et chantilly.</p>
