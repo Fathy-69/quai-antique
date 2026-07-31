@@ -1,8 +1,9 @@
-@function rem($pixels, $context: 16px) {
+﻿@function rem($pixels, $context: 16px) {
     @if (unitless($pixels)) { $pixels: $pixels * 1px; }
     @return ($pixels / $context) * 1rem;
 }
+
 @function text-contrast($bg-color) {
-    @if (lightness($bg-color) > 60%) { @return #392C1E; }
-    @else { @return #ffffff; }
+    @if (lightness($bg-color) > 60%) { return #392C1E; }
+    @else { return #ffffff; }
 }

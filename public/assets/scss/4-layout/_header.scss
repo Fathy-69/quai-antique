@@ -1,11 +1,22 @@
-header {
-    background-color: $dark-savoy; border-bottom: 2px solid $gold-accent;
+﻿header {
+    background-color: $dark-savoy;
+    border-bottom: 2px solid $gold-accent;
     .navbar { padding-top: 1rem; padding-bottom: 1rem; }
-    .navbar-brand { font-family: $font-headings; letter-spacing: 1px; i { color: $gold-accent; } }
+    .navbar-brand {
+        font-family: $font-headings;
+        letter-spacing: 1px;
+        i { color: $gold-accent; }
+    }
     .navbar-nav .nav-link {
-        color: rgba(#ffffff, 0.85); font-size: 0.95rem; position: relative; @include transition-smooth(color);
+        color: rgba(#ffffff, 0.85);
+        font-size: 0.95rem;
+        position: relative;
+        @include transition-smooth(color);
         &:hover, &.active { color: $gold-accent; }
-        &::after { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background-color: $gold-accent; @include transition-smooth(all); transform: translateX(-50%); }
+        &::after {
+            content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 2px;
+            background-color: $gold-accent; @include transition-smooth(all); transform: translateX(-50%);
+        }
         &:hover::after, &.active::after { width: 70%; }
     }
 }

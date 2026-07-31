@@ -1,9 +1,22 @@
-.gallery-card {
-    position: relative; overflow: hidden; border-radius: $border-radius; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+﻿.gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: $border-radius;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     img { width: 100%; height: 280px; object-fit: cover; @include transition-smooth(transform, 0.4s); }
     .gallery-overlay {
-        position: absolute; inset: 0; background: rgba($dark-savoy, 0.85); @include flex-center(column); opacity: 0; @include transition-smooth(opacity, 0.3s); padding: 1.5rem; text-align: center;
+        position: absolute;
+        inset: 0;
+        background: rgba($dark-savoy, 0.85);
+        @include flex-center(column);
+        opacity: 0;
+        @include transition-smooth(opacity, 0.3s);
+        padding: 1.5rem;
+        text-align: center;
         .gallery-title { color: #ffffff; font-family: $font-headings; font-size: 1.3rem; transform: translateY(15px); @include transition-smooth(transform, 0.3s); }
     }
-    &:hover { img { transform: scale(1.08); } .gallery-overlay { opacity: 1; .gallery-title { transform: translateY(0); } } }
+    &:hover {
+        img { transform: scale(1.08); }
+        .gallery-overlay { opacity: 1; .gallery-title { transform: translateY(0); } }
+    }
 }

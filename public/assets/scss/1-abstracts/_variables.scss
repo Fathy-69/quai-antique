@@ -1,33 +1,21 @@
-// =========================================================
-// 🎨 CHARTE GRAPHIQUE OFFICIELLE QUAI ANTIQUE
-// =========================================================
+﻿// ðŸ”ï¸ Palette Savoyarde
+$dark-savoy   : #392C1E !default;
+$gold-accent  : #906427 !default;
+$gold-hover   : #734E1D !default;
+$beige-light  : #F8F6F0 !default;
+$beige-border : #B6AC97 !default;
+$white        : #FFFFFF !default;
 
-// Palette de Couleurs Officielle
-$cafe-sombre   : #392C1E !default;
-$ocre-dore     : #906427 !default;
-$ocre-hover    : #734E1D !default;
-$beige-sage    : #B6AC97 !default;
-$beige-light   : #F8F6F0 !default;
-$blanc         : #FFFFFF !default;
+// ðŸ”¤ Polices
+$font-headings : 'Outfit', sans-serif !default;
+$font-body     : 'Roboto', sans-serif !default;
 
-// Alias pour compatibilité
-$dark-savoy    : $cafe-sombre !default;
-$gold-accent   : $ocre-dore !default;
-$gold-hover    : $ocre-hover !default;
-$beige-border  : $beige-sage !default;
-
-// Typographies Officielles (Montserrat + Lora + Hind Madurai)
-$font-heading    : 'Montserrat', sans-serif !default;
-$font-subheading : 'Lora', serif !default;
-$font-body       : 'Hind Madurai', sans-serif !default;
-$font-headings   : $font-heading !default;
-
-// Framework Overrides
-$primary       : $ocre-dore !default;
-$dark          : $cafe-sombre !default;
+// ðŸ› ï¸ Surcharges Bootstrap 5
+$primary       : $gold-accent !default;
+$dark          : $dark-savoy !default;
 $body-bg       : $beige-light !default;
-$body-color    : $cafe-sombre !default;
-$border-color  : $beige-sage !default;
+$body-color    : $dark-savoy !default;
+$border-color  : $beige-border !default;
 
 $border-radius-sm   : 6px !default;
 $border-radius      : 12px !default;

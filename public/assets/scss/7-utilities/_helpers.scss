@@ -1,4 +1,11 @@
+﻿// _helpers.scss
 .bg-dark-savoy { background-color: $dark-savoy !important; }
 .bg-beige-light { background-color: $beige-light !important; }
 .text-gold { color: $gold-accent !important; }
 .tracking-wide { letter-spacing: 1.5px; }
+
+// _spacing.scss
+.py-section { padding-top: 5rem; padding-bottom: 5rem; }
+
+// _visibility.scss
+.visually-hidden-custom { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
