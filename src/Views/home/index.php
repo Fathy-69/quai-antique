@@ -1,6 +1,4 @@
-<!-- ========================================================= -->
 <!-- PAGE D'ACCUEIL - CONFORME À LA MAQUETTE EXACTE DU SUJET -->
-<!-- ========================================================= -->
 
 <!-- 1. HERO BANNER -->
 <section class="hero-banner d-flex align-items-center justify-content-center text-center">
