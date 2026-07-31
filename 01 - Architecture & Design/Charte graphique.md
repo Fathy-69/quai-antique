@@ -43,6 +43,9 @@ L'identité visuelle officielle de **Quai Antique** s'appuie sur une esthétique
    * **Composition** : Blason géométrique à 2 pics de montagnes savoyardes avec la mention **QUAI ANTIQUE RESTAURANT**.
    * **Usage** : Utilisé pour les supports papier imprimés, en-têtes de factures et déclinaisons secondaires.
 
+> [!NOTE]
+> Pour des raisons de sécurité navigateur, de conformité RGPD (Google Fonts) et de stabilité d'affichage, le logo SVG doit impérativement être vectorisé (*Outline stroke*). Voir le document dédié : [[Bilan Technique - Erreur Affichage Logo SVG]].
+
 ---
 
 ## Couleurs
