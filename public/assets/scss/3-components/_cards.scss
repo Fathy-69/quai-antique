@@ -1,4 +1,4 @@
-﻿.card-dish {
+.card-dish {
     background-color: #ffffff;
     border: 1px solid $beige-border;
     border-radius: $border-radius;
@@ -7,7 +7,7 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     .dish-img { height: 200px; object-fit: cover; width: 100%; }
     .dish-title { font-family: $font-headings; font-weight: 700; color: $dark-savoy; }
-    .dish-price { font-family: $font-headings; font-weight: 700; color: $gold-accent; font-size: 1.25rem; }
+    .dish-price { font-family: $font-headings; font-weight: 700; color: $gold-accent; font-size: 1.25rem; white-space: nowrap; }
 }
 
 .formula-card {
