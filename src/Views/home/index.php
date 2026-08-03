@@ -118,7 +118,7 @@
                 <div class="gallery-card" tabindex="0" role="button">
                     <img src="/assets/images/dishes/fondue.jpg" alt="Fondue Savoyarde aux trois fromages affinés" class="gallery-card-img">
                     <div class="gallery-overlay">
-                        <h3 class="gallery-overlay-title">Fondue Savoyarde</h3>
+                        <h3 class="gallery-title">Fondue Savoyarde</h3>
                         <p class="font-serif fst-italic text-gold mb-0 small">aux trois fromages affinés</p>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
                 <div class="gallery-card" tabindex="0" role="button">
                     <img src="/assets/images/dishes/tartiflette.jpg" alt="Tartiflette revisitée au Reblochon fermier" class="gallery-card-img">
                     <div class="gallery-overlay">
-                        <h3 class="gallery-overlay-title">Tartiflette revisitée</h3>
+                        <h3 class="gallery-title">Tartiflette revisitée</h3>
                         <p class="font-serif fst-italic text-gold mb-0 small">au Reblochon fermier</p>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
                 <div class="gallery-card" tabindex="0" role="button">
                     <img src="/assets/images/dishes/filet-perche.jpg" alt="Filets de perche meunière du Lac du Bourget" class="gallery-card-img">
                     <div class="gallery-overlay">
-                        <h3 class="gallery-overlay-title">Filets de perche meunière</h3>
+                        <h3 class="gallery-title">Filets de perche meunière</h3>
                         <p class="font-serif fst-italic text-gold mb-0 small">du Lac du Bourget</p>
                     </div>
                 </div>
@@ -149,7 +149,7 @@
                 <div class="gallery-card" tabindex="0" role="button">
                     <img src="/assets/images/dishes/tarte-myrtille.png" alt="Tarte fine aux myrtilles sauvages des Bauges" class="gallery-card-img">
                     <div class="gallery-overlay">
-                        <h3 class="gallery-overlay-title">Tarte fine aux myrtilles</h3>
+                        <h3 class="gallery-title">Tarte fine aux myrtilles</h3>
                         <p class="font-serif fst-italic text-gold mb-0 small">sauvages des Bauges</p>
                     </div>
                 </div>
@@ -159,7 +159,7 @@
                 <div class="gallery-card" tabindex="0" role="button">
                     <img src="/assets/images/quai_antique_hero.jpg" alt="Ambiance chaleureuse du restaurant Quai Antique" class="gallery-card-img">
                     <div class="gallery-overlay">
-                        <h3 class="gallery-overlay-title">Ambiance chaleureuse</h3>
+                        <h3 class="gallery-title">Ambiance chaleureuse</h3>
                         <p class="font-serif fst-italic text-gold mb-0 small">du restaurant Quai Antique</p>
                     </div>
                 </div>
@@ -167,7 +167,7 @@
         </div>
 
         <div class="mt-5 text-center pt-3">
-            <a href="/reservation" class="btn btn-dark-cta btn-lg px-5 py-3 rounded-2 text-uppercase font-serif">
+            <a href="/reservation" class="btn btn-gold btn-lg rounded-pill px-5 py-3 fw-bold shadow hover-scale text-decoration-none font-serif text-uppercase">
                 <i class="fa-solid fa-bell me-2"></i>Réserver une table dès maintenant
             </a>
         </div>
