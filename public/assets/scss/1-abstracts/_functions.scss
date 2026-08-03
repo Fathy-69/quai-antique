@@ -4,6 +4,6 @@
 }
 
 @function text-contrast($bg-color) {
-    @if (lightness($bg-color) > 60%) { return #392C1E; }
-    @else { return #ffffff; }
+    @if (lightness($bg-color) > 60%) { @return #392C1E; }
+    @else { @return #ffffff; }
 }
