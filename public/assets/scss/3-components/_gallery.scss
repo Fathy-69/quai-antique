@@ -20,3 +20,60 @@
         .gallery-overlay { opacity: 1; .gallery-title { transform: translateY(0); } }
     }
 }
+
+// Contrôles du Carrousel
+.carousel-gallery-control {
+    width: 44px;
+    height: 44px;
+    background-color: $dark-savoy;
+    border: 1px solid $gold-accent;
+    border-radius: 50%;
+    color: lighten($gold-accent, 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.95;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    @include transition-smooth(all);
+
+    &:hover {
+        background-color: $gold-accent;
+        color: #ffffff;
+        opacity: 1;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    &.prev { left: 10px; }
+    &.next { right: 10px; }
+    
+    @include respond-to('desktop') {
+        &.prev { left: -20px; }
+        &.next { right: -20px; }
+    }
+}
+
+.carousel-indicators-gold {
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    
+    [data-bs-target] {
+        width: 12px !important;
+        height: 12px !important;
+        border-radius: 50% !important;
+        background-color: $beige-border !important;
+        border: 1px solid $gold-accent !important;
+        opacity: 0.5;
+        @include transition-smooth(all);
+        
+        &.active {
+            background-color: $gold-accent !important;
+            opacity: 1;
+            transform: scale(1.25);
+        }
+    }
+}
