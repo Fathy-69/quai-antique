@@ -9,3 +9,11 @@
 
 // _visibility.scss
 .visually-hidden-custom { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); }
+
+.gold-ornament {
+    color: $gold-accent;
+    font-size: 1.25rem;
+    display: block;
+    text-align: center;
+    margin: 1rem auto;
+}
