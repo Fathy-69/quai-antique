@@ -65,7 +65,7 @@
 
             <!-- Copyright -->
             <div class="text-center pt-3 text-secondary small">
-                © 2025 Quai Antique – Tous droits réservés | <a href="/login" class="text-secondary text-decoration-none ms-2">Espace Client / Admin</a>
+                © 2025 Quai Antique – Tous droits réservés | <a href="/login" class="text-secondary text-decoration-none ms-2">Espace Client</a> | <a href="/admin" class="text-secondary text-decoration-none">Admin</a>
             </div>
         </div>
     </footer>
