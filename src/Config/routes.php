@@ -10,6 +10,7 @@ $router->get('/menus', 'MenuController@index');
 $router->get('/reservation', 'BookingController@showForm');
 $router->get('/login', 'AuthController@showLogin');
 $router->get('/register', 'AuthController@showRegister');
+$router->post('/register', 'AuthController@register');
 $router->get('/admin', 'Admin/DashboardController@dashboard');
 $router->get('/admin/', 'Admin/DashboardController@dashboard');
 $router->get('/admin/dashboard', 'Admin/DashboardController@dashboard');
