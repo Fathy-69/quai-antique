@@ -8,11 +8,22 @@ class Database {
 
     public static function getConnection(): PDO {
         if (self::$instance === null) {
-            $host = getenv('DB_HOST') ?: '127.0.0.1';
-            $dbname = getenv('DB_NAME') ?: 'quai_antique';
-            $user = getenv('DB_USER') ?: 'root';
-            $password = getenv('DB_PASSWORD') ?: '';
-            $port = getenv('DB_PORT') ?: '3306';
+            // Load .env manually if it exists
+            $envFile = __DIR__ . '/../../.env';
+            if (file_exists($envFile)) {
+                $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+                foreach ($lines as $line) {
+                    if (strpos(trim($line), '#') === 0) continue;
+                    list($name, $value) = explode('=', $line, 2);
+                    $_ENV[trim($name)] = trim($value);
+                }
+            }
+
+            $host = $_ENV['DB_HOST'] ?? getenv('DB_HOST') ?: '127.0.0.1';
+            $dbname = $_ENV['DB_NAME'] ?? getenv('DB_NAME') ?: 'quai_antique';
+            $user = $_ENV['DB_USER'] ?? getenv('DB_USER') ?: 'root';
+            $password = $_ENV['DB_PASSWORD'] ?? getenv('DB_PASSWORD') ?: '';
+            $port = $_ENV['DB_PORT'] ?? getenv('DB_PORT') ?: '3306';
 
             try {
                 $dsn = "mysql:host={$host};port={$port};dbname={$dbname};charset=utf8mb4";
