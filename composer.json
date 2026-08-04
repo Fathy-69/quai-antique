@@ -1,0 +1,9 @@
+﻿{
+    "name": "quai-antique/backend",
+    "description": "Backend MVC pour le restaurant Quai Antique",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
