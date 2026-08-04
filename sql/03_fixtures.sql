@@ -13,10 +13,11 @@ DELETE FROM categories;
 DELETE FROM schedules;
 DELETE FROM users;
 
--- 1. Compte Administrateur par défaut (Password: Admin123!)
-INSERT INTO users (email, password, roles, default_guests, allergies) VALUES 
-('admin@quaiantique.fr', '$2y$12$zC.m/P55Z0rQJ2lM0d/PceO5lXW2L8M1j6Qv5Z/7hL0K3P0Q1R2S3', '["ROLE_ADMIN"]', 2, NULL),
-('client@gmail.com', '$2y$12$eImiTXuWVxfM37uY4JANjO5E.6hXW2L8M1j6Qv5Z/7hL0K3P0Q1R2S3', '["ROLE_USER"]', 4, 'Gluten');
+-- 1. Comptes Utilisateurs (Admin, Client, Employé)
+INSERT INTO users (email, password, roles, status, default_guests, allergies) VALUES 
+('admin@quaiantique.fr', '$2y$12$zC.m/P55Z0rQJ2lM0d/PceO5lXW2L8M1j6Qv5Z/7hL0K3P0Q1R2S3', '["ROLE_ADMIN"]', 'actif', 2, NULL),
+('employe@quaiantique.fr', '$2y$12$zC.m/P55Z0rQJ2lM0d/PceO5lXW2L8M1j6Qv5Z/7hL0K3P0Q1R2S3', '["ROLE_EMPLOYEE"]', 'actif', 2, NULL),
+('client@gmail.com', '$2y$12$eImiTXuWVxfM37uY4JANjO5E.6hXW2L8M1j6Qv5Z/7hL0K3P0Q1R2S3', '["ROLE_USER"]', 'actif', 4, 'Gluten');
 
 -- 2. Horaires d'Ouverture
 -- Lundi, Mardi, Jeudi, Vendredi : Midi 12h00 - 14h00 / Soir 19h00 - 22h00
@@ -40,6 +41,14 @@ INSERT INTO categories (id, name, position) VALUES
 (4, 'Desserts', 4),
 (5, 'Vins & Boissons', 5);
 
+-- 3bis. Ingrédients / Produits pour la gestion de Stock
+INSERT INTO products (name, category, origin, allergens, stock_qty, stock_unit) VALUES
+('Tomme des Bauges AOP', 'Fromages', 'Coopérative des Bauges', 'Lait', 12.5, 'kg'),
+('Reblochon Laitier', 'Fromages', 'Ferme de Thônes', 'Lait', 25.0, 'unités'),
+('Vin d''Apremont', 'Boissons', 'Domaine Savoyard', 'Sulfites', 45, 'bouteilles'),
+('Pommes de terre Agata', 'Légumes', 'Producteur local', 'Aucun', 150.0, 'kg'),
+('Filets de Perche', 'Poissons', 'Lac du Bourget', 'Poisson', 8.5, 'kg');
+
 -- 4. Plats de la Carte
 INSERT INTO dishes (category_id, title, description, price, active) VALUES 
 (1, 'Velouté de Potimarron & Beaufort', 'Potimarron rôti au thym des montagnes, émulsion au Beaufort AOP affiné 18 mois et éclats de noisettes torréfiées.', 14.50, 1),
@@ -57,10 +66,12 @@ INSERT INTO menus (id, title, description) VALUES
 (1, 'Menu Saveurs de Savoie', 'Un voyage gustatif complet mettant à l’honneur les fromages et viandes de nos vallées.'),
 (2, 'Menu Le Grand Quai', 'L’expression ultime du savoir-faire du Chef Arnaud Michant en 5 temps.');
 
-INSERT INTO menu_formulas (menu_id, title, description, price) VALUES 
-(1, 'Formule Entrée + Plat OU Plat + Dessert', 'Au choix parmi les suggestions du marché affichées à l’ardoise.', 29.00),
-(1, 'Formule Complète (Entrée + Plat + Dessert)', 'Sélection parmi l’ensemble des plats identifiés par l’étoile du Chef.', 38.00),
-(2, 'Menu Dégustation 5 Temps', 'Menu d’exception comprenant amuse-bouche, entrée, plat de poisson ou viande,fromages affinés et dessert signature.', 54.00);
+INSERT INTO menu_formulas (menu_id, title, description, price, theme, diet_type, min_guests) VALUES 
+(1, 'Formule Entrée + Plat OU Plat + Dessert', 'Au choix parmi les suggestions du marché affichées à l’ardoise.', 29.00, 'Toute l''année', 'Standard', 1),
+(1, 'Formule Complète (Entrée + Plat + Dessert)', 'Sélection parmi l’ensemble des plats identifiés par l’étoile du Chef.', 38.00, 'Toute l''année', 'Standard', 1),
+(2, 'Menu Dégustation 5 Temps', 'Menu d’exception comprenant amuse-bouche, entrée, plat de poisson ou viande, fromages affinés et dessert signature.', 54.00, 'Toute l''année', 'Standard', 1),
+(2, 'Spécial Noël - Dégustation Truffe & Beaufort', 'Menu événementiel des fêtes, autour des produits nobles.', 75.00, 'Noël', 'Standard', 2),
+(1, 'Formule Végétarienne 3 Temps', 'Entrée, Plat et Dessert 100% végétariens.', 32.00, 'Toute l''année', 'Végétarien', 1);
 
 -- 6. Réservations de démonstration
 INSERT INTO bookings (customer_name, customer_email, guest_count, booking_date, booking_time, service_type, allergies, status) VALUES 
