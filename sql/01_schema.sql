@@ -12,21 +12,9 @@ CREATE TABLE IF NOT EXISTS users (
     email VARCHAR(180) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     roles JSON NOT NULL,
-    status VARCHAR(20) DEFAULT 'actif',
     default_guests INT DEFAULT 2,
     allergies TEXT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB;
-
--- Table des produits et ingrédients (Gestion des stocks)
-CREATE TABLE IF NOT EXISTS products (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(150) NOT NULL,
-    category VARCHAR(50) NOT NULL,
-    origin VARCHAR(150) NULL,
-    allergens VARCHAR(150) DEFAULT 'Aucun',
-    stock_qty DECIMAL(10,2) DEFAULT 0.00,
-    stock_unit VARCHAR(20) NOT NULL,
+    status VARCHAR(50) DEFAULT 'active',
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
 
@@ -62,9 +50,6 @@ CREATE TABLE IF NOT EXISTS menu_formulas (
     title VARCHAR(150) NOT NULL,
     description TEXT NOT NULL,
     price DECIMAL(10,2) NOT NULL,
-    theme VARCHAR(50) NULL,
-    diet_type VARCHAR(50) NULL,
-    min_guests INT DEFAULT 1,
     CONSTRAINT fk_formulas_menus FOREIGN KEY (menu_id) REFERENCES menus(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
