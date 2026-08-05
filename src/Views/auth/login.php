@@ -12,6 +12,20 @@
             </div>
 
             <!-- Formulaire de Connexion -->
+            <?php if (isset($_SESSION['flash']['error'])): ?>
+                <div class="alert alert-danger" role="alert">
+                    <i class="fa-solid fa-triangle-exclamation me-2"></i> <?= $_SESSION['flash']['error'] ?>
+                </div>
+                <?php unset($_SESSION['flash']['error']); ?>
+            <?php endif; ?>
+
+            <?php if (isset($_SESSION['flash']['success'])): ?>
+                <div class="alert alert-success" role="alert">
+                    <i class="fa-solid fa-circle-check me-2"></i> <?= $_SESSION['flash']['success'] ?>
+                </div>
+                <?php unset($_SESSION['flash']['success']); ?>
+            <?php endif; ?>
+
             <form action="/login" method="POST">
                 
                 <!-- Champ Adresse Email -->

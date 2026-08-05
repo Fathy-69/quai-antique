@@ -58,25 +58,17 @@ class User {
     /**
      * Recherche un utilisateur par son adresse email.
      */
-    public static function findByEmail(string $email): ?self {
+    public static function findByEmail(string $email): ?array {
         $db = Database::getConnection();
         
         $stmt = $db->prepare("SELECT * FROM users WHERE email = :email");
         $stmt->execute(['email' => $email]);
         
-        $row = $stmt->fetch();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$row) {
             return null;
         }
 
-        return new self(
-            $row['email'],
-            $row['password'],
-            json_decode($row['roles'], true) ?: ['ROLE_USER'],
-            $row['default_guests'],
-            $row['allergies'],
-            $row['id'],
-            $row['created_at']
-        );
+        return $row;
     }
 }

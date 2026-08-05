@@ -23,7 +23,7 @@ class Database {
                 ]);
             } catch (PDOException $e) {
                 // Fallback to local SQLite database if MySQL server is offline during dev
-                $sqlitePath = __DIR__ . '/../storage/quai_antique.sqlite';
+                $sqlitePath = __DIR__ . '/../../storage/quai_antique.sqlite';
                 $dir = dirname($sqlitePath);
                 if (!is_dir($dir)) {
                     mkdir($dir, 0777, true);
@@ -49,6 +49,7 @@ class Database {
                 roles TEXT NOT NULL,
                 default_guests INTEGER DEFAULT 2,
                 allergies TEXT NULL,
+                status TEXT DEFAULT 'active',
                 created_at TEXT DEFAULT CURRENT_TIMESTAMP
             );
 

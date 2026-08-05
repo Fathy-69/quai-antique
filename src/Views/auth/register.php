@@ -12,6 +12,13 @@
 
             <form action="/register" method="POST">
                 
+                <?php if (isset($_SESSION['flash']['error'])): ?>
+                    <div class="alert alert-danger" role="alert">
+                        <i class="fa-solid fa-triangle-exclamation me-2"></i> <?= $_SESSION['flash']['error'] ?>
+                    </div>
+                    <?php unset($_SESSION['flash']['error']); ?>
+                <?php endif; ?>
+                
                 <div class="row g-3">
                     <!-- Nom -->
                     <div class="col-md-6 mb-3">
