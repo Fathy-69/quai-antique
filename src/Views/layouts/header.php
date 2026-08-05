@@ -45,17 +45,25 @@ $current_page = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
                         <li class="nav-item">
                             <a class="nav-link px-3 <?= ($current_page === '/menus') ? 'active border-bottom-gold' : '' ?>" href="/menus">La Carte & Menus</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3 <?= ($current_page === '/login') ? 'active border-bottom-gold' : '' ?>" href="/login">
-                                <i class="fa-regular fa-user me-1"></i> Connexion
-                            </a>
-                        </li>
-                        <?php if ($current_page === '/admin' || $current_page === '/admin/dashboard'): ?>
-                        <li class="nav-item">
-                            <a class="nav-link px-3 active text-warning" href="/admin">
-                                <i class="fa-solid fa-lock me-1"></i> Administration
-                            </a>
-                        </li>
+                        <?php if (!isset($_SESSION['user'])): ?>
+                            <li class="nav-item">
+                                <a class="nav-link px-3 <?= ($current_page === '/login' || $current_page === '/register') ? 'active border-bottom-gold' : '' ?>" href="/login">
+                                    <i class="fa-regular fa-user me-1"></i> Connexion
+                                </a>
+                            </li>
+                        <?php else: ?>
+                            <?php if (in_array('ROLE_ADMIN', $_SESSION['user']['roles'])): ?>
+                                <li class="nav-item">
+                                    <a class="nav-link px-3 <?= str_starts_with($current_page, '/admin') ? 'active text-warning border-bottom-gold' : 'text-warning' ?>" href="/admin">
+                                        <i class="fa-solid fa-lock me-1"></i> Administration
+                                    </a>
+                                </li>
+                            <?php endif; ?>
+                            <li class="nav-item">
+                                <a class="nav-link px-3" href="/logout">
+                                    <i class="fa-solid fa-right-from-bracket me-1"></i> Déconnexion
+                                </a>
+                            </li>
                         <?php endif; ?>
                     </ul>
 
