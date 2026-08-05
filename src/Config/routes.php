@@ -9,6 +9,8 @@ $router->get('/home', 'HomeController@index');
 $router->get('/menus', 'MenuController@index');
 $router->get('/reservation', 'BookingController@showForm');
 $router->get('/login', 'AuthController@showLogin');
+$router->post('/login', 'AuthController@login');
+$router->get('/logout', 'AuthController@logout');
 $router->get('/register', 'AuthController@showRegister');
 $router->post('/register', 'AuthController@register');
 $router->get('/admin', 'Admin/DashboardController@dashboard');
@@ -18,6 +20,7 @@ $router->get('/admin/dashboard', 'Admin/DashboardController@dashboard');
 // Routes API (AJAX JSON)
 $router->get('/api/booking/availability', 'BookingController@checkAvailability');
 $router->get('/api/schedules', 'Admin/ScheduleController@getSchedules');
+$router->get('/api/products', 'Admin/ProductController@getProducts');
 $router->post('/api/booking/create', 'BookingController@createBooking');
 
 return $router;
