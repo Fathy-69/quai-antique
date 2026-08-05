@@ -63,8 +63,8 @@ class BookingService {
      */
     public function createBooking(array $data): bool {
         $stmt = $this->pdo->prepare("
-            INSERT INTO bookings (customer_name, customer_email, guest_count, booking_date, booking_time, service_type, allergies, status)
-            VALUES (:name, :email, :guests, :date, :time, :service, :allergies, 'CONFIRMED')
+            INSERT INTO bookings (customer_name, customer_email, guest_count, booking_date, booking_time, service_type, allergies, status, user_id)
+            VALUES (:name, :email, :guests, :date, :time, :service, :allergies, 'CONFIRMED', :user_id)
         ");
 
         return $stmt->execute([
@@ -74,7 +74,8 @@ class BookingService {
             'date' => $data['booking_date'],
             'time' => $data['booking_time'],
             'service' => $data['service_type'],
-            'allergies' => $data['allergies'] ?? null
+            'allergies' => $data['allergies'] ?? null,
+            'user_id' => $data['user_id'] ?? null
         ]);
     }
 

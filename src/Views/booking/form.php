@@ -115,7 +115,7 @@
 
             <!-- Cadre Global du Formulaire -->
             <div class="booking-card mx-auto" style="max-width: 960px;">
-                <form action="/api/reservation" method="POST" id="bookingFormDedicated">
+                <form action="/api/booking/create" method="POST" id="bookingFormDedicated">
                     
                     <!-- 1. INFORMATIONS PERSONNELLES -->
                     <div class="mb-4 pb-3 border-bottom">
@@ -172,17 +172,11 @@
                         <div class="font-heading fs-5 fw-bold mb-3">
                             <i class="fa-regular fa-clock me-2 text-gold"></i>3. HORAIRE D'ARRIVÉE <span class="fw-normal text-muted small">(TRANCHES DE 15 MIN - EXCL. DERNIÈRE HEURE)</span>
                         </div>
-                        <div class="d-flex flex-wrap gap-2 mb-2">
-                            <button type="button" class="time-slot-badge">12:00</button>
-                            <button type="button" class="time-slot-badge">12:15</button>
-                            <button type="button" class="time-slot-badge">12:30</button>
-                            <button type="button" class="time-slot-badge">12:45</button>
-                            <button type="button" class="time-slot-badge">13:00</button>
-                            <button type="button" class="time-slot-badge">13:15</button>
-                            <button type="button" class="time-slot-badge">13:30</button>
-                            <button type="button" class="time-slot-badge disabled">13:45 ✕</button>
-                            <button type="button" class="time-slot-badge disabled">14:00 ✕</button>
+                        <div class="d-flex flex-wrap gap-2 mb-2" id="time-slots-container">
+                            <p class="text-muted small w-100"><em>Veuillez sélectionner une date, un service et le nombre de convives pour voir les horaires disponibles.</em></p>
                         </div>
+                        <input type="hidden" id="booking_time" name="booking_time" required>
+                        <div id="booking-alert" class="mt-3 d-none alert"></div>
                         <p class="font-serif fst-italic text-muted small mb-0">Les créneaux de la dernière heure ne sont pas disponibles.</p>
                     </div>
 
